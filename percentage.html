@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <link rel="stylesheet" href="../public/agecalc/percentage.css"> -->
+    <!-- <link rel="stylesheet" href="tailwind.css"> -->
+    <link rel="stylesheet" href="tailwind.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&family=Oswald&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&family=Oswald&family=Roboto+Condensed:ital@1&display=swap" rel="stylesheet">
+    
+    
+    <title>Percentage Calculator</title>
+    <style>
+      #texts{
+        font-family: 'Roboto Condensed', sans-serif;
+      }
+    </style>
+    
+</head>
+<body>
+    <!-- full body -->
+      <div class=" flex flex-row p-2 border-b-2 border-y-green-500 shadow-xl ">  
+    <p class="text-2xl ml-2 absolute  ">HOMEE<span class="text-xs sm:text-xs relative">a home of Calculators</span></p>
+    <!-- short contents -->
+   <div class="flex flex-row justify-end w-2/4 ml-auto py-2 text-xs" > 
+      <div class="mr-1">About</div> 
+      <div>Contacts</div> 
+ </div>
+   </div>
+   <h1 class="mt-4 ml-2 font-bold ">Percentage Calculator</h1>
+   <p class="mt-3 ml-2" id="texts">Please provide any two values below and click the "Calculate" button to get the third value.</p>
+    <div class="flex flex-cols mt-3">
+      
+    <!-- value -->
+    <div class="border-2 w-screen sm:w-1/2 sm:ml-auto  sm:mr-auto  mx-3 mt-3 h-24  bg-gray-200 ">
+      <div class="flex flex-row mt-3">
+    <p ><span class="text mx-1 sm:ml-14 overflow-hidden ">Value</span> <input  class="border-2 w-32 h-5 " type="text" name="MarkSecured" id="value1"></p>
+
+     <!-- total -->
+     
+    <p><span class="text mx-1  mt-3 sm:ml-5 overflow-hidden" >Out Of</span> <input class="border-2 w-32 h-5 absolute overflow-hidden" type="text" name="Total" id="value2"></p>
+  </div>
+  
+     <!-- button -->
+    <button class="border-2 mt-3 ml-16 px-2 sm:ml-32 bg-green-400" onclick="persent()" >Calculate</button>
+
+
+
+
+      <!-- Percentage -->
+    <input class=" border-2 mt-3 ml-3 " type="text" name="Percentage" id="ans">
+  </div>
+</div>
+
+
+ <div class="border-2 w-screen mx-3  h-24  sm:ml-auto  sm:mr-auto sm:w-2/4  mt-5 bg-gray-200 ">
+    
+    <div class="flex flex-row  mt-3 ">
+      <!-- value -->
+    <p><span class=" ml-2  mx-2 sm:ml-14" >%</span><input  class="Percentage border-2 w-32 h-5 " type="text" name="MarkSecured" id="value3"></p>
+
+    <!-- persentage -->
+   <p><span class="text mx-2 mt-3 sm:ml-5" >Out Of</span> <input class="border-2 w-32 h-5 absolute" type="text" name="Totall" id="value4"></p>
+    </div>
+   
+   <button class="secondBtn border-2 mt-3 ml-16 px-2  sm:ml-32 bg-green-400 " onclick="val()" >Calculate</button>
+     <!-- PERSENTAGE OF -->
+   <input class=" border-2 mt-3 ml-3" type="text"  id="anserrr">
+ </div>
+
+ 
+ <div class="mx-3 mt-10" id="texts">
+ <p>Percentage Formula
+  Although the percentage formula can be written in different forms, it is essentially an algebraic equation involving three values.</p>
+  
+ <p class="text-center mt-2" id="texts">P × V1 = V2</p> 
+  
+ <p id="texts"></p> P is the percentage, V1 is the first value that the percentage will modify, and V2 is the result of the percentage operating on V1. The calculator provided automatically converts the input percentage into a decimal to compute the solution. However, if solving for the percentage, the value returned will be the actual percentage, not its decimal representation.</p>
+  
+  <p class="text-center mt-2" id="texts">EX: P × 30 = 1.5</p> 
+  
+  
+  <p class="text-center mt-2"  id="texts">P =
+  1.5
+  30
+  = 0.05 × 100 = 5%</p> 
+  <p class="mt-2" id="texts">If solving manually, the formula requires the percentage in decimal form, so the solution for P needs to be multiplied by 100 in order to convert it to a percent. This is essentially what the calculator above does, except that it accepts inputs in percent rather than decimal form.</p>
+
+</div>
+<script> 
+ 
+ function persent(){
+   let num1 = document.getElementById('value1').value;
+   let num2 = document.getElementById('value2').value;
+   document.getElementById('ans').value = (num1/num2)*100+"%";
+}  
+  function val(){
+      let num3 = document.getElementById('value3').value;
+      let num4 = document.getElementById('value4').value;
+      document.getElementById('anserrr').value= (num3/100)*num4;
+  }
+
+   
+   
+</script>
+
+    </div>
+</body>
+</html>

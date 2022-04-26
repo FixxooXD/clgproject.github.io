@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="tailwind.css">  
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&family=Oswald&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&family=Oswald&family=Roboto+Condensed:ital@1&display=swap" rel="stylesheet">
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #home{
+            font-family: 'Nunito';
+        }
+        #down{
+            font-family: 'Roboto Condensed', sans-serif;
+        }
+        #simple_calc{
+            font-family: 'Roboto Condensed', sans-serif;
+        }
+        #search{
+            font-family: 'Roboto Condensed', sans-serif;
+        }
+        #objectives{
+            font-family: 'Nunito';
+        }
+        #simle{
+            font-family: 'Nunito';
+        }
+        
+    </style>
+    <title>Calculator Home</title>
+</head>
+<body class="">
+
+    <!-- full body -->
+    <div>
+        <div class=" flex flex-rowp-2 border-b-2 border-y-green-500 shadow-xl ">  
+      <p class="text-2xl ml-2 absolute  ">HOMEE<span class="text-xs sm:text-xs relative">a home of Calculators</span></p>
+      <!-- short contents -->
+     <div class="flex flex-row justify-end w-2/4 ml-auto py-2 text-xs  " > 
+        <div class="mr-1">About</div> 
+        <div>Contacts</div> 
+   </div>
+     </div>
+     <div class="mt-2">
+        <div class="flex flex-row justify-end" >
+        <input class="border-2 w-40 h-5" type="search" name="search" id="">
+        <div><button class="border-2 ml-1 px-1 mr-2 h-5 text-sm " id="search">search</button></div>
+    </div>
+     <!-- Calculator -->
+     <div class=" flex flex-row">
+    <div name="Calculator" class=" ml-5 grid grid-cols-4  w-2/3  h-64 border-2 " id="n-calcu ">
+       
+        <input type="text" name="result" placeholder="0" class="text-3xl font-bold text-gray-500 col-span-4" name="Result"   id="">
+        <div class=" border-2 border-black flex items-center justify-center border-black col-span-2">C</div>
+        
+        <button  value="" class="flex items-center justify-center border-2 border-black">Del</button>
+        <div class="flex items-center justify-center border-2 border-black">/</div>
+        <button type="button" value="7" onclick="number(value)"  class="flex items-center justify-center border-2 border-black">7</button>
+        <div type="button"  value="8" onclick="number(value)" class="flex items-center justify-center border-2 border-black">8</div>
+        <button onclick="number(value)" value="9" class="flex items-center justify-center border-2 border-black">9</button>
+        <button onclick="number(value)" value="*" class=" flex items-center justify-center border-2 border-black">X</button >
+        <div onclick="number(value)" value="4" class="flex items-center justify-center border-2 border-black">4</div>
+        <div onclick="number(value)" value="5" class="flex items-center justify-center border-2 border-black">5</div>
+        <div onclick="number(value)" value="6" class="flex items-center justify-center border-2 border-black">6</div>
+        <div onclick="number(value)" value="-" class="flex items-center justify-center border-2 border-black">-</div>
+        <div onclick="number(value)" value="1" class="flex items-center justify-center border-2 border-black">1</div>
+        <div onclick="number(value)" value="2" class="flex items-center justify-center border-2 border-black">2</div>
+        <div onclick="number(value)" value="3" class="flex items-center justify-center border-2 border-black">3</div>
+        <div onclick="number(value)" value="+" class="flex items-center justify-center border-2 border-black">+</div>
+        <div onclick="number(value)" value="0" class="flex items-center justify-center border-2 border-black">0</div>
+        <div onclick="number(value)" value="." class="flex items-center justify-center border-2 border-black">.</div>
+        <div onclick="number(value)" value="=" class=" bg-green-600 flex items-center justify-center border-2 col-span-2  ">=</div>
+    </div>
+    
+    <div class="mt-8 w-1/2  m-3 ">
+        <h3 class="underline "id="simle" >Simple Calculator<h3>
+            <p id="simple_calc">This is a simple basic calculator with memory functions similar to a small handheld calculator. Use this basic calculator online for math with addition, subtraction, division and multiplication. Memory and clear functions for this standard calculator are listed below.</p> </div>
+     </div>
+    </div>
+    
+ <div class="mt-4 p-6">
+    <a class="" href="../Scintific .html" target="_blank">Sciencetific</a>
+    <a href="./agecalc.html" target="_blank">age</a>
+    <a href="./percentage.html" target="_blank">percentage </a>
+</div>
+<div class="m-2" >
+    <h2 class="underline mt-5" id="objectives"> Primary Objective</h2>
+    <p id="down" >This website is fully focuses is to provide fast, comprehensive, convenient, free online calculators in a plethora of areas to help you "do the math" quickly in areas.. Additionally, we believe the internet should be a source of free information. Therefore, all of our tools and services are completely free, with no registration required.</p>
+
+        <p id="down"> coded and developed each calculator individually and put each one through strict, comprehensive testing. However, please inform us if you notice even the slightest error</p>
+    </p>
+</div>
+</div>
+
+
+
+
+<script src="../public/homePage/home.js"></script>
+</body>
+</html>
