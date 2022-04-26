@@ -26,71 +26,69 @@
 <body>
     <!-- full body -->
       <div class=" flex flex-rowp-2 border-b-2 border-y-green-500 shadow-xl ">  
-    <p class="text-2xl ml-2 absolute  ">HOMEE<span class="text-xs sm:text-xs relative">a home of Calculators</span></p>
+    <p class="text-3xl ml-2 absolute  ">HOMEE<span class="text-xs sm:text-xs relative">a home of Calculators</span></p>
     <!-- short contents -->
    <div class="flex flex-row justify-end w-2/4 ml-auto py-2 text-xs  " > 
       <div class="mr-1">About</div> 
       <div>Contacts</div> 
  </div>
    </div>
-   <h1 class="mt-4 ml-2 font-bold ">Percentage Calculator</h1>
-   <p class="mt-3 ml-2" id="texts">Please provide any two values below and click the "Calculate" button to get the third value.</p>
-    <div class="flex flex-cols mt-3">
+   <h1 class="mt-4 ml-2 font-bold sm:text-3xl underline">Percentage Calculator</h1>
+   <p class="mt-3 ml-2 sm:text-lg" id="texts">Please provide any two values below and click the "Calculate" button to get the third value.</p>
+    <div class="flex flex-cols mt-2">
       
     <!-- value -->
-    <div class="border-2 w-screen  sm:ml-auto  sm:mr-auto sm:w-2/4  mx-3 mt-3 h-24  bg-gray-200 ">
+    <div class="border-2 w-screen  sm:ml-auto mx-2 rounded-lg  sm:mr-auto sm:w-2/4 mt-3 h-24 sm:h-32 sm:-6/12 bg-gray-200 ">
       <div class="flex flex-row mt-3">
-    <p ><span class="text mx-1 sm:ml-14 overflow-hidden ">Value</span> <input  class="border-2 w-32 h-5 " type="text" name="MarkSecured" id="value1"></p>
+    <p ><span class="text mx-1 sm:ml-14 sm:text-xl">Value</span> <input  class="border-2 w-32 h-5 sm:w-48 sm:h-7   " type="text" name="MarkSecured" id="value1"></p>
 
      <!-- total -->
      
-    <p><span class="text mx-1  mt-3 sm:ml-5 " >Out Of</span> <input class="border-2 w-32 h-5 absolute overflow-hidden" type="text" name="Total" id="value2"></p>
+    <p><span class="text mx-1  mt-3 sm:ml-5 sm:text-xl " >Out Of</span> <input class="border-2 w-32 h-5 absolute sm:w-48 mx-1 sm:mt-1 sm:h-7" type="text" name="Total" id="value2"></p>
   </div>
   
      <!-- button -->
-    <button class="border-2 mt-3 ml-8 px-2 sm:ml-32 bg-green-400 w-20 h-8" onclick="persent()" ><span class="text-sm">Calculate</span></button>
+    <button class="border-2 mt-3 ml-8 px-2 sm:ml-40 bg-orange-400 w-20 h-8 rounded-lg" onclick="persent()" ><span class="text-sm text-white">Calculate</span></button>
 
-
-
-
-      <!-- Percentage -->
-    <input class="border border-2 border-2 mt-3 ml-3 h-5 " type="text" name="Percentage" id="ans">
+    <input class="border-2 mt-3 ml-3 h-5 w-40 sm:w-48 sm:h-7 " type="text" name="Percentage" id="ans">
   </div>
 </div>
 
 
- <div class="border-2 w-screen mx-3  h-24  sm:ml-auto  sm:mr-auto sm:w-2/4  mt-5 bg-gray-200 ">
+<!-- Percentage -->
+
+ <div class="border-2 w-screen mt-8  h-24  rounded-lg mx-2 sm:ml-auto sm:mr-auto sm:h-32 sm:w-6/12 bg-gray-200 ">
     
     <div class="flex flex-row  mt-3 ">
       <!-- value -->
-    <p><span class=" ml-2  mx-2 sm:ml-14" >%</span><input  class="Percentage border-2 w-32 h-5 " type="text" name="MarkSecured" id="value3"></p>
+    <p><span class=" ml-2  mx-2 sm:ml-28 sm:text-xl" >%</span><input  class="Percentage border-2 w-32 sm:h-7 h-5 sm:w-48" type="text" name="MarkSecured" id="value3"></p>
 
     <!-- persentage -->
-   <p><span class="text mx-2 mt-3 sm:ml-5" >Out Of</span> <input class="border-2 w-32 h-5 absolute" type="text" name="Totall" id="value4"></p>
+   <p><span class="text mx-2 mt-3 sm:ml-5 sm:text-xl"  >Out Of</span> <input class="border-2 w-32 sm:h-7 h-5 absolute sm:w-48" type="text" name="Totall" id="value4"></p>
     </div>
    
-   <button class="secondBtn border-2 mt-3 ml-10 px-2  sm:ml-32 bg-green-400 w-20 h-8 " onclick="val()" ><span class="text-sm">Calculate</span></button>
+   <button class="secondBtn  mt-3 ml-10 px-2  sm:ml-40 bg-orange-400 w-20 h-8 rounded-lg" onclick="val()" ><span class="text-sm text-white rounded-lg">Calculate</span></button>
      <!-- PERSENTAGE OF -->
-   <input class="border border-2 mt-3 ml-3 h-5 w-40" type="text"  id="anserrr">
+   <input class=" border-2 mt-3 ml-3 h-5 w-40 sm:w-48 sm:h-7" type="text"  id="anserrr">
  </div>
 
  
- <div class="mx-3 mt-10" id="texts">
+ <div class="mx-3 mt-10 sm:text-lg" id="texts">
  <p>Percentage Formula
   Although the percentage formula can be written in different forms, it is essentially an algebraic equation involving three values.
   
- <p class="text-center mt-2" id="texts">P × V1 = V2</p> 
+ <p class="text-center mt-2 sm:text-lg " id="texts">P × V1 = V2</p> 
   
- <p id="texts"></p> P is the percentage, V1 is the first value that the percentage will modify, and V2 is the result of the percentage operating on V1. The calculator provided automatically converts the input percentage into a decimal to compute the solution. However, if solving for the percentage, the value returned will be the actual percentage, not its decimal representation.</p>
+ <p id="texts sm:text-lg"></p> P is the percentage, V1 is the first value that the percentage will modify, and V2 is the result of the percentage operating on V1. The calculator provided automatically converts the input percentage into a decimal to compute the solution. However, if solving for the percentage, the value returned will be the actual percentage, not its decimal representation.</p>
   
-  <p class="text-center mt-2" id="texts">EX: P × 30 = 1.5</p> 
+  <p class="text-center mt-2 sm:text-lg" id="texts">EX: P × 30 = 1.5</p> 
   
   
-  <p class="text-center mt-2"  id="texts">P =
+  <p class="text-center mt-2 sm:text-lg"  id="texts">P =
   1.5
   30
   = 0.05 × 100 = 5%</p> 
-  <p class="mt-2" id="texts">If solving manually, the formula requires the percentage in decimal form, so the solution for P needs to be multiplied by 100 in order to convert it to a percent. This is essentially what the calculator above does, except that it accepts inputs in percent rather than decimal form.</p>
+  <p class="mt-2 sm:text-lg" id="texts">If solving manually, the formula requires the percentage in decimal form, so the solution for P needs to be multiplied by 100 in order to convert it to a percent. This is essentially what the calculator above does, except that it accepts inputs in percent rather than decimal form.</p>
 
 </div>
 <script> 
