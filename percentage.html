@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <!-- <link rel="stylesheet" href="../public/agecalc/percentage.css"> -->
     <!-- <link rel="stylesheet" href="tailwind.css"> -->
-    <link rel="stylesheet" href="tailwind.css">
+    <link rel="stylesheet" href="./tailwind.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,10 +25,10 @@
 </head>
 <body>
     <!-- full body -->
-      <div class=" flex flex-row p-2 border-b-2 border-y-green-500 shadow-xl ">  
+      <div class=" flex flex-rowp-2 border-b-2 border-y-green-500 shadow-xl ">  
     <p class="text-2xl ml-2 absolute  ">HOMEE<span class="text-xs sm:text-xs relative">a home of Calculators</span></p>
     <!-- short contents -->
-   <div class="flex flex-row justify-end w-2/4 ml-auto py-2 text-xs" > 
+   <div class="flex flex-row justify-end w-2/4 ml-auto py-2 text-xs  " > 
       <div class="mr-1">About</div> 
       <div>Contacts</div> 
  </div>
@@ -38,7 +38,7 @@
     <div class="flex flex-cols mt-3">
       
     <!-- value -->
-    <div class="border-2 w-screen sm:w-1/2 sm:ml-auto  sm:mr-auto  mx-3 mt-3 h-24  bg-gray-200 ">
+    <div class="border-2 w-screen sm:w-1/2 sm:ml-auto  sm:mr-auto sm:w-2/4  mx-3 mt-3 h-24  bg-gray-200 ">
       <div class="flex flex-row mt-3">
     <p ><span class="text mx-1 sm:ml-14 overflow-hidden ">Value</span> <input  class="border-2 w-32 h-5 " type="text" name="MarkSecured" id="value1"></p>
 
@@ -54,12 +54,12 @@
 
 
       <!-- Percentage -->
-    <input class=" border-2 mt-3 ml-3 " type="text" name="Percentage" id="ans">
+    <input class="border border-2 mt-3 ml-3 " type="text" name="Percentage" id="ans">
   </div>
 </div>
 
 
- <div class="border-2 w-screen mx-3  h-24  sm:ml-auto  sm:mr-auto sm:w-2/4  mt-5 bg-gray-200 ">
+ <div class="border-2 w-screen mx-3  h-24 sm:w-1/2 sm:ml-auto  sm:mr-auto sm:w-2/4  mt-5 bg-gray-200 ">
     
     <div class="flex flex-row  mt-3 ">
       <!-- value -->
@@ -71,13 +71,13 @@
    
    <button class="secondBtn border-2 mt-3 ml-16 px-2  sm:ml-32 bg-green-400 " onclick="val()" >Calculate</button>
      <!-- PERSENTAGE OF -->
-   <input class=" border-2 mt-3 ml-3" type="text"  id="anserrr">
+   <input class="border border-2 mt-3 ml-3" type="text"  id="anserrr">
  </div>
 
  
  <div class="mx-3 mt-10" id="texts">
  <p>Percentage Formula
-  Although the percentage formula can be written in different forms, it is essentially an algebraic equation involving three values.</p>
+  Although the percentage formula can be written in different forms, it is essentially an algebraic equation involving three values.
   
  <p class="text-center mt-2" id="texts">P × V1 = V2</p> 
   
