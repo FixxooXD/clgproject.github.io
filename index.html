@@ -38,16 +38,15 @@
 </head>
 <body class="">
 
-    <!-- full body -->
-    <div>
-        <div class=" flex flex-rowp-2 border-b-2 border-y-green-500 shadow-xl ">  
-      <p class="text-2xl ml-2 absolute">HOMEE<span class="text-xs sm:text-xs relative">a home of Calculators</span></p>
-      <!-- short contents -->
-     <div class="flex flex-row justify-end w-2/4 ml-auto py-2 text-xs  " > 
-        <div class="mr-1">About</div> 
-        <div>Contacts</div> 
+   <!-- full body -->
+   <div class=" flex flex-rowp-2 border-b-2 border-y-green-500 shadow-xl mt-2 ">  
+    <a class="text-4xl ml-3 absolute ">HOMEE<span class="text-xs sm:text-xs ">a home of Calculators</span></a>
+    <!-- short contents -->
+   <div class="flex flex-row justify-end w-2/4 ml-auto py-2 text-xs sm:text-lg  relative" > 
+      <div class="mr-1 ">About</div> 
+      <div>Contacts</div> 
+ </div>
    </div>
-     </div>
      <div class="mt-2">
         <div class="flex flex-row justify-end" >
         <input class="border-2 w-32 sm:w-40 h-5" type="search" name="search" id="">
@@ -59,26 +58,25 @@
      <div class=" flex flex-col sm:flex-row">
     <div name="Calculator" class=" grid grid-cols-4  sm:w-1/2 w-4/5 ml-auto mr-auto   h-80 sm:h-64 border-2 mt-3 sm:ml-3 " id="n-calcu ">
        
-        <div type="text"  class="text-3xl font-bold text-gray-500 col-span-4 flex justify-end  items-end" id="">0</div>
-        <div class=" border-2 border-black flex items-center justify-center border-black col-span-2">C</div>
-        
-        <button  value="" class="flex items-center justify-center border-2 border-black">Del</button>
-        <div class="flex items-center justify-center border-2 border-black">/</div>
-        <button type="button" value="7" onclick="number(value)"  class="flex items-center justify-center border-2 border-black">7</button>
-        <div type="button"  value="8" onclick="number(value)" class="flex items-center justify-center border-2 border-black">8</div>
-        <button onclick="number(value)" value="9" class="flex items-center justify-center border-2 border-black">9</button>
-        <button onclick="number(value)" value="*" class=" flex items-center justify-center border-2 border-black">X</button >
-        <div onclick="number(value)" value="4" class="flex items-center justify-center border-2 border-black">4</div>
-        <div onclick="number(value)" value="5" class="flex items-center justify-center border-2 border-black">5</div>
-        <div onclick="number(value)" value="6" class="flex items-center justify-center border-2 border-black">6</div>
-        <div onclick="number(value)" value="-" class="flex items-center justify-center border-2 border-black">-</div>
-        <div onclick="number(value)" value="1" class="flex items-center justify-center border-2 border-black">1</div>
-        <div onclick="number(value)" value="2" class="flex items-center justify-center border-2 border-black">2</div>
-        <div onclick="number(value)" value="3" class="flex items-center justify-center border-2 border-black">3</div>
-        <div onclick="number(value)" value="+" class="flex items-center justify-center border-2 border-black">+</div>
-        <div onclick="number(value)" value="0" class="flex items-center justify-center border-2 border-black">0</div>
-        <div onclick="number(value)" value="." class="flex items-center justify-center border-2 border-black">.</div>
-        <div onclick="number(value)" value="=" class=" bg-green-600 flex items-center justify-center border-2 col-span-2  ">=</div>
+         <input type="text" class="text-3xl font-bold text-gray-500 col-span-4 flex overflow-hidden" placeholder="0" id="res"></input>
+        <button class=" border-2 border-black flex items-center justify-center border-black col-span-2" onclick="clear()" id="clear">C</button>
+        <button onclick="clear()" class="flex items-center justify-center border-2 border-black" id="del">Del</button>
+        <div onclick="number('/')" class="flex items-center justify-center border-2 border-black">/</div>
+        <button type="button"  onclick="number('7')"  class="flex items-center justify-center border-2 border-black">7</button>
+        <button type="button"   onclick="number('8')" class="flex items-center justify-center border-2 border-black">8</button>
+        <button onclick="number('9')" value="9" class="flex items-center justify-center border-2 border-black">9</button>
+        <button onclick="number('*')" value="*" class=" flex items-center justify-center border-2 border-black">X</button >
+        <div onclick="number('4')" class="flex items-center justify-center border-2 border-black">4</div>
+        <div onclick="number('5')" class="flex items-center justify-center border-2 border-black">5</div>
+        <div onclick="number('6')" class="flex items-center justify-center border-2 border-black">6</div>
+        <div onclick="number('-')" class="flex items-center justify-center border-2 border-black">-</div>
+        <div onclick="number('1')" class="flex items-center justify-center border-2 border-black">1</div>
+        <div onclick="number('2')" class="flex items-center justify-center border-2 border-black">2</div>
+        <div onclick="number('3')" class="flex items-center justify-center border-2 border-black">3</div>
+        <div onclick="number('+')" class="flex items-center justify-center border-2 border-black">+</div>
+        <div onclick="number('0')" class="flex items-center justify-center border-2 border-black">0</div>
+        <div onclick="number('.')" class="flex items-center justify-center border-2 border-black">.</div>
+        <div onclick="cal()"  class=" bg-green-600 flex items-center justify-center border-2 col-span-2 [">=</div>
     </div>
         
             <div class="text-sm sm:text-lg sm:w-1/2 " id="simple_calc">
@@ -105,7 +103,7 @@
 
 
 
-<script src="../public/homePage/home.js"></script>
+<script src="./home.js"></script>
 </body>
 </html>
 
