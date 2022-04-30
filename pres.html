@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tailwind.css">
+    <title>Document</title>
+    <style>
+      #Box-1{
+          width: 50%;
+      }
+      @media only screen and (max-width: 520px) {
+        #Box-1{
+       min-width: 100%;
+         margin-left: 0;
+         margin-right: 0;
+         margin-top: 10px;
+         height:8rem;
+        }
+
+  }
+
+  @media only screen and (max-width: 730px) {
+        #Box-1{
+       min-width: 100%;
+         margin-left: 0;
+         margin-right: 0;
+         margin-top: 10px;
+         height:7rem;
+        }
+
+}
+      
+    </style>
+</head>
+<body>
+  <div id="body" class="flex flex-col justify-center  items-center mt-5 ">
+      <!-- value -->
+      <div id="Box-1" class="border-2 rounded-lg mt-3 h-24 bg-gray-200 ">
+        <div class="flex flex-row mt-2">
+      <p ><span class="text mx-1  ">Value</span> <input  class="border-2 w-32 h-5" type="text" name="MarkSecured" id="value1"></p>
+      <p><span class="text mx-1  mt-2  " >Out Of</span> <input class="border-2 w-32 h-5 " type="text" name="Total" id="value2"></p>
+    </div>
+      <div class="flex flex-row mt-3">
+      <button class="border-2 mt-1  px-2  bg-orange-400 w-20 h-8 rounded-lg ml-3" onclick="persent()" ><span class="text-sm text-white">Calculate</span></button>
+      <input class="border-2 mt-1  h-5 w-40 ml-2" type="text" name="Percentage" id="ans">
+  </div>
+</div>
+
+      <!-- Percentage -->
+
+      <div id="Box-1" class="border-2 rounded-lg mt-3 h-24 bg-gray-200 ">
+        <div class="flex flex-row mt-3">
+      <p ><span class="text mx-1 ">%</span> <input  class="border-2 w-32 h-5" type="text" name="MarkSecured" id="value1"></p>
+      <p><span class="text ml-3  mt-3  " >Out Of</span> <input class="border-2 w-32 h-5 ml-2" type="text" name="Total" id="value2"></p>
+    </div>
+      <div class="flex flex-row mt-3">
+      <button class="border-2 mt-1  px-2  bg-orange-400 w-20 h-8 rounded-lg ml-3" onclick="persent()" ><span class="text-sm text-white">Calculate</span></button>
+      <input class="border-2 mt-1  h-5 w-40 ml-2 " type="text" name="Percentage" id="ans">
+  </div>
+</div>
+    <!-- </div> -->
+    <!-- </div> -->
+  <!-- </div> -->
+</div>
+</body>
+</html>
