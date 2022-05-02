@@ -1,68 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="tailwind.css">
-    <title>Document</title>
-    <style>
-      #Box-1{
-          width: 50%;
-      }
-      @media only screen and (max-width: 520px) {
-        #Box-1{
-       min-width: 100%;
-         margin-left: 0;
-         margin-right: 0;
-         margin-top: 10px;
-         height:8rem;
-        }
-
-  }
-
-  @media only screen and (max-width: 730px) {
-        #Box-1{
-       min-width: 100%;
-         margin-left: 0;
-         margin-right: 0;
-         margin-top: 10px;
-         height:7rem;
-        }
-
-}
-      
-    </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="tailwind.css">  
+  <title>Document</title>
 </head>
 <body>
-  <div id="body" class="flex flex-col justify-center  items-center mt-5 ">
-      <!-- value -->
-      <div id="Box-1" class="border-2 rounded-lg mt-3 h-24 bg-gray-200 ">
-        <div class="flex flex-row mt-2">
-      <p ><span class="text mx-1  ">Value</span> <input  class="border-2 w-32 h-5" type="text" name="MarkSecured" id="value1"></p>
-      <p><span class="text mx-1  mt-2  " >Out Of</span> <input class="border-2 w-32 h-5 " type="text" name="Total" id="value2"></p>
-    </div>
-      <div class="flex flex-row mt-3">
-      <button class="border-2 mt-1  px-2  bg-orange-400 w-20 h-8 rounded-lg ml-3" onclick="persent()" ><span class="text-sm text-white">Calculate</span></button>
-      <input class="border-2 mt-1  h-5 w-40 ml-2" type="text" name="Percentage" id="ans">
-  </div>
-</div>
+    <!-- full body -->
+    <div class=" flex flex-rowp-2 border-b-2 border-y-green-500 shadow-xl mt-2 ">  
+      <a class="text-2xl sm:text-4xl ml-2 sm:ml-3 absolute ">HOMEE<span class="text-xs sm:text-xs ">a home of Calculators</span></a>
+      <!-- short contents -->
+     <div class="flex flex-row justify-end w-2/4 ml-auto py-2 text-xs sm:text-lg  relative" > 
+        <div class="mr-1 ">About</div> 
+        <div>Contacts</div> 
+   </div>
+     </div>
+  <div class="body ">
+    <div class="container flex flex-col justify-center items-center mt-12 ">
+        <h1 class="mr-auto">Age Calculator </h1>
+        <div class=" w-1/3">
 
-      <!-- Percentage -->
+        <div class="inputs-wrapper rounded-lg border-2 flex flex-row justify-around items-center  h-32">
+            <input class="border-2 h-14 w-3/5" type="date" id="date-input">
+            <button class="border-2 bg-white h-14 w-2/6" onclick="ageCalculate()">Calculate</button>
+        </div>
 
-      <div id="Box-1" class="border-2 rounded-lg mt-3 h-24 bg-gray-200 ">
-        <div class="flex flex-row mt-3">
-      <p ><span class="text mx-1 ">%</span> <input  class="border-2 w-32 h-5" type="text" name="MarkSecured" id="value1"></p>
-      <p><span class="text ml-3  mt-3  " >Out Of</span> <input class="border-2 w-32 h-5 ml-2" type="text" name="Total" id="value2"></p>
+        <div class="outputs-wrapper  flex flex-row justify-around mt-5">
+
+            <div class="border-2 w-24 h-24">
+                <span id="years ">
+                    -
+                </span>
+                <p>
+                    Years
+                </p>
+            </div>
+
+            <div class="border-2 w-24 h-24">
+                <span id="months">
+                    -
+                </span>
+                <p>
+                   Months
+                </p>
+            </div>
+
+            <div class="border-2 w-24 h-24">
+                <span id="days">
+                    -
+                </span>
+                <p>
+                    Days
+                </p>
+            </div>
+
+        </div>
     </div>
-      <div class="flex flex-row mt-3">
-      <button class="border-2 mt-1  px-2  bg-orange-400 w-20 h-8 rounded-lg ml-3" onclick="persent()" ><span class="text-sm text-white">Calculate</span></button>
-      <input class="border-2 mt-1  h-5 w-40 ml-2 " type="text" name="Percentage" id="ans">
   </div>
-</div>
-    <!-- </div> -->
-    <!-- </div> -->
-  <!-- </div> -->
-</div>
+  
+
+    <script>
+      const months = [31,28,31,30,31,30,31,31,30,31,30,31];
+
+function ageCalculate(){
+ let today = new Date();
+ let inputDate = new Date(document.getElementById("date-input").value);
+ let birthMonth,birthDate,birthYear;
+ let birthDetails = {
+     date:inputDate.getDate(),
+     month:inputDate.getMonth()+1,
+     year:inputDate.getFullYear()
+ }
+ let currentYear = today.getFullYear();
+ let currentMonth = today.getMonth()+1;
+ let currentDate = today.getDate();
+
+ leapChecker(currentYear);
+
+ if(
+     birthDetails.year > currentYear ||
+     ( birthDetails.month > currentMonth && birthDetails.year == currentYear) || 
+     (birthDetails.date > currentDate && birthDetails.month == currentMonth && birthDetails.year == currentYear)
+ ){
+     alert("Not Born Yet");
+     displayResult("-","-","-");
+     return;
+ }
+
+ birthYear = currentYear - birthDetails.year;
+
+ if(currentMonth >= birthDetails.month){
+     birthMonth = currentMonth - birthDetails.month;
+ }
+ else{
+     birthYear--;
+     birthMonth = 12 + currentMonth - birthDetails.month;
+ }
+
+ if(currentDate >= birthDetails.date){
+     birthDate = currentDate - birthDetails.date;
+ }
+ else{
+     birthMonth--;
+     let days = months[currentMonth - 2];
+     birthDate = days + currentDate - birthDetails.date;
+     if(birthMonth < 0){
+         birthMonth = 11;
+         birthYear--;
+     }
+ }
+ displayResult(birthDate,birthMonth,birthYear);
+}
+
+function displayResult(bDate,bMonth,bYear){
+ document.getElementById("years").textContent = bYear;
+ document.getElementById("months").textContent = bMonth;
+ document.getElementById("days").textContent = bDate;
+}
+
+function leapChecker(year){
+ if(year % 4 == 0 || (year % 100 == 0 && year % 400 == 0)){
+     months[1] = 29;
+ }
+ else{
+     months[1] = 28;
+ }
+}
+ </script>
 </body>
 </html>

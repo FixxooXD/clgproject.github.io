@@ -4,7 +4,8 @@ module.exports = {
   './index.html',
   './agecalc.html',
  './percentage.html',
-'./pres.html',],
+'./pres.html',
+'./ageee.html',],
   theme: {
     extend: {},
   },

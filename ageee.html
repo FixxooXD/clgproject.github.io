@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="tailwind.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&family=Oswald&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&family=Oswald&family=Roboto+Condensed:ital@1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Document</title>
+    <style>
+
+ p{
+   font-family: 'Roboto Condensed', sans-serif;
+  }
+
+   #container{
+       width:40%;
+   }
+  #fontt{
+    font-family: 'Nunito';
+  }
+  
+   #inputs_wrapper{
+ box-shadow: 0 15px 20px rgba(0,0,0,0.3);
+   }
+   @media only screen and (max-width: 1024px) {
+        #container{
+          width: 70%;
+        }
+    } 
+
+ @media only screen and (max-width: 640px) {
+        #container{
+          width: 70%;
+        }
+    } 
+
+
+  @media only screen and (max-width: 500px) {
+        #container{
+          width: 80%;
+        }
+    } 
+
+ @media only screen and (max-width: 450px) {
+        #container{
+          width: 90%;
+        }
+    } 
+         @media only screen and (max-width: 340px) {
+        #container{
+          width:100%;
+        }
+     }
+     
+    </style>
+   </head>
+ <body>
+     <!-- full body -->
+     <div class=" flex flex-rowp-2 border-b-2 border-y-green-500 shadow-xl mt-2 ">  
+        <a class="text-2xl sm:text-4xl ml-2 sm:ml-3 absolute ">HOMEE<span class="text-xs sm:text-xs ">a home of Calculators</span></a>
+        <!-- short contents -->
+       <div class="flex flex-row justify-end w-2/4 ml-auto py-2 text-xs sm:text-lg  relative" > 
+          <div class="mr-1 ">About</div> 
+          <div>Contacts</div> 
+     </div>
+       </div>   
+       <div class="body ">
+        <div class="container container flex flex-col justify-center items-center mt-5  ">
+            <h1 id="fontt" class="mr-auto ml-6 text-2xl underline "> Age Calculator </h1>
+            <P  class="mr-auto text-xl ml-6">Find the number of years, months, weeks, and days by giving the date of origin or the starting date and it will give the data according to the present dates <span><i class="fa-regular fa-calendar"></i></span>
+                .</p>
+            <div id="container"  class=" rounded-lg mt-5">
+            <div id="inputs_wrapper" class="inputs-wrapper border-2 flex flex-row    rounded-lg  justify-around items-center bg-black h-32">
+                <input class="border-2 h-14 w-3/5 rounded-lg p-5" type="date" id="date-input">     
+                <button class="border-2 bg-white h-14 w-3/12 rounded-lg" onclick="ageCalculate()">Calculate</button>
+            </div>
+            <div class="outputs-wrapper flex flex-row  justify-around mt-8 ">
+                <div id="inputs_wrapper" class="w-24 h-24 bg-black  flex flex-col justify-center rounded-lg items-center">
+                    <span class="text-white " id="years">
+                        -
+                    </span>
+                    <p class="text-white">
+                        Years
+                    </p>
+                </div>
+                <div id="inputs_wrapper" class="w-24 h-24 bg-black  flex flex-col rounded-lg justify-center items-center">
+                    <span class="text-white" id="months">
+                        -
+                    </span>
+                    <p class="text-white">
+                       Months
+                    </p>
+                </div>
+                <div id="inputs_wrapper" class="w-24 h-24 bg-black  flex flex-col rounded-lg justify-center items-center">
+                    <span class="text-white" id="days">
+                        -
+                    </span>
+                    <p class="text-white">
+                        Days
+                    </p>
+                </div>
+            </div>
+        </div>
+    
+        <div></div>
+        <script>
+             const months = [31,28,31,30,31,30,31,31,30,31,30,31];
+    
+    function ageCalculate(){
+        let today = new Date();
+        let inputDate = new Date(document.getElementById("date-input").value);
+        let birthMonth,birthDate,birthYear;
+        let birthDetails = {
+            date:inputDate.getDate(),
+            month:inputDate.getMonth()+1,
+            year:inputDate.getFullYear()
+        }
+        let currentYear = today.getFullYear();
+        let currentMonth = today.getMonth()+1;
+        let currentDate = today.getDate();
+    
+        leapChecker(currentYear);
+    
+        if(
+            birthDetails.year > currentYear ||
+            ( birthDetails.month > currentMonth && birthDetails.year == currentYear) || 
+            (birthDetails.date > currentDate && birthDetails.month == currentMonth && birthDetails.year == currentYear)
+        ){
+            alert("Not Born Yet");
+            displayResult("-","-","-");
+            return;
+        }
+    
+        birthYear = currentYear - birthDetails.year;
+    
+        if(currentMonth >= birthDetails.month){
+            birthMonth = currentMonth - birthDetails.month;
+        }
+        else{
+            birthYear--;
+            birthMonth = 12 + currentMonth - birthDetails.month;
+        }
+    
+        if(currentDate >= birthDetails.date){
+            birthDate = currentDate - birthDetails.date;
+        }
+        else{
+            birthMonth--;
+            let days = months[currentMonth - 2];
+            birthDate = days + currentDate - birthDetails.date;
+            if(birthMonth < 0){
+                birthMonth = 11;
+                birthYear--;
+            }
+        }
+        displayResult(birthDate,birthMonth,birthYear);
+    }
+    
+    function displayResult(bDate,bMonth,bYear){
+        document.getElementById("years").textContent = bYear;
+        document.getElementById("months").textContent = bMonth;
+        document.getElementById("days").textContent = bDate;
+    }
+    
+    function leapChecker(year){
+        if(year % 4 == 0 || (year % 100 == 0 && year % 400 == 0)){
+            months[1] = 29;
+        }
+        else{
+            months[1] = 28;
+        }
+    }
+        </script>
+    </body>
+    </html>
