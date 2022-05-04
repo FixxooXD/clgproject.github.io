@@ -13,5 +13,10 @@ function number(input){
  }
  
  function clear(){
-     document.getElementById("res").value = "";
+    document.getElementById('res').value = ''
+ }
+
+ function home(){
+        window.location.href = "./index.html";
+        
  }
