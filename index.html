@@ -32,12 +32,15 @@
         #simle{
             font-family: 'Nunito';
         }
-        
+        #res{
+          text-align:right;
+        }
+
     </style>
     <title>Calculator Home</title>
 </head>                                       
 <body class="">
-
+    
    <!-- full body -->
    <div class=" flex flex-rowp-2 border-b-2 border-y-green-500 shadow-xl mt-2 ">  
     <a class="text-2xl sm:text-4xl ml-2 sm:ml-3 absolute" onclick="home()" >HOMEE<span class="text-xs sm:text-xs ">a home of Calculators</span></a>
@@ -60,7 +63,7 @@
          
     <div name="Calculator" class=" grid grid-cols-4  sm:w-1/2 w-4/5 ml-auto mr-auto   h-80 sm:h-64 border-2 mt-3 sm:ml-3 " id="n-calcu ">
        
-         <input type="text" class="text-3xl font-bold text-gray-500 col-span-4 flex overflow-hidden" placeholder="0"  id="res"></input>
+         <input type="text" class="text-3xl font-bold text-gray-500 col-span-4 flex overflow-hidden mr-1" placeholder="0"  id="res"></input>
         <button class=" border-2  flex items-center justify-center  col-span-2 hover:bg-slate-300 transition-all" onclick="document.getElementById('res').value = ''  " id="clear">C</button>
         <button onclick="clear()" class="flex items-center justify-center border-2 hover:bg-slate-300 transition-all duration-100 ease-in" id="del">Del</button>
         <div onclick="number('/')" class="flex items-center justify-center border-2 hover:bg-slate-300 transition-all">/</div>

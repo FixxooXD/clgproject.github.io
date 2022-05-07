@@ -1,5 +1,6 @@
 const clrBtn = document.getElementById("del");
 let result= document.getElementById("res");
+
 console.log(result);
 
 
@@ -12,9 +13,16 @@ function number(input){
     document.getElementById("res").value = output;
  }
  
- function clear(){
-    document.getElementById('res').value = ''
- }
+ clrBtn.addEventListener('click',function(){
+   const numsArr = result.value.split("");
+   let New =  numsArr.splice(numsArr.length - 1);
+ document.getElementById("res").value = numsArr.join("");   
+
+ });
+
+
+
+
 
  function home(){
         window.location.href = "./index.html";
