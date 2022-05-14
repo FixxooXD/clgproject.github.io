@@ -20,6 +20,7 @@
     
       #Box-1{
           width: 50%;
+          /* background-image: linear-gradient(to right, #0F2027, #203A43, #2C5364); */
       }
       @media only screen and (max-width: 520px) {
         #Box-1{
@@ -46,13 +47,25 @@
         }
 
 }
-@media only screen and (max-width: px) {
+/* To Remove the  arrowns in input type text */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+/* @media only screen and (max-width: px) {
         #Box-1{
         
          
         }
 
-      }
+      } */
       
     </style>
     
@@ -60,7 +73,7 @@
 <body>
     <!-- full body -->
    <div class=" flex flex-rowp-2 border-b-2 border-y-green-500 shadow-xl mt-2   ">  
-    <a class=" text-2xl sm:text-4xl ml-2 sm:ml-3 absolute  ">HOMEE<span class="text-xs sm:text-xs ">a home of Calculators</span></a>
+    <a class=" text-2xl sm:text-4xl ml-2 sm:ml-3 absolut"  href="./index.html">CalQfy<span class="text-xs sm:text-xs ">a home of Calculators</span></a>
     <!-- short contents -->
    <div class="flex flex-row justify-end w-2/4 ml-auto py-2 text-xs sm:text-lg  relative" > 
       <div class="mr-1 ">About</div> 
@@ -73,12 +86,12 @@
     <!-- value -->
     <div id="Box-1" class="border-2 rounded-lg mt-3 h-24 bg-gray-200 shadow-lg ">
       <div class="flex flex-row mt-2 " id="inner-box">
-    <p ><span class="text mx-1  ">Value</span> <input  class="border-2 w-32 h-5 " type="text" name="MarkSecured" id="value1"></p>
-    <p><span class="text mx-1  mt-2  " >Out Of</span> <input class="border-2 w-32 h-5 " type="text" name="Total" id="value2"></p>
+    <p ><span class="text mx-1  ">Value</span> <input  class="border-2 w-32 h-5 " placeholder="value" type="number" name="MarkSecured" id="value1"></p>
+    <p><span class="text mx-1  mt-2  " >Out Of</span> <input class="border-2 w-32 h-5 " type="number" name="Total" id="value2"></p>
   </div>
     <div class="flex flex-row mt-3">
-    <button class="border-2 mt-1  px-2  bg-orange-400 w-20 h-8 rounded-lg ml-3" onclick="persent()" ><span class="text-sm text-white">Calculate</span></button>
-    <input class="border-2 mt-1  h-5 w-40 ml-2" type="text" name="Percentage" id="ans">
+    <button class=" mt-1  px-2  bg-orange-400 w-20 h-8 rounded-lg ml-3" onclick="persent()" ><span class="text-sm text-white">Calculate</span></button>
+    <input class="border-2 mt-1  h-5 w-40 ml-2" type="number" name="Percentage" id="ans">
 </div>
 </div>
 
@@ -86,12 +99,12 @@
   
 <div id="Box-1" class="border-2 rounded-lg mt-3 h-24 bg-gray-200  shadow-lg  ">
   <div class="flex flex-row mt-3  " id="inner-box">
-<p ><span class="text mx-1  ">%</span> <input  class="border-2 w-32 h-5" type="text" name="MarkSecured" id="value3"></p>
-<p><span class="text ml-3  mt-3  " >Out Of</span> <input class="border-2 w-32 h-5 ml-2" type="text" name="Total" id="value4"></p>
+<p ><span class="text mx-1  ">%</span> <input  class="border-2 w-32 h-5" type="number"  placeholder="value" name="MarkSecured" id="value3"></p>
+<p><span class="text ml-3  mt-3  " >Out Of</span> <input class="border-2 w-32 h-5 ml-2" type="number" name="Total" id="value4"></p>
 </div>
 <div class="flex flex-row mt-3">
-<button class="border-2 mt-1  px-2  bg-orange-400 w-20 h-8 rounded-lg ml-3" onclick="val()" ><span class="text-sm text-white">Calculate</span></button>
-<input class="border-2 mt-1  h-5 w-40 ml-2 " type="text" name="Percentage" id="anserrr">
+<button class=" mt-1  px-2  bg-orange-400 w-20 h-8 rounded-lg ml-3" onclick="val()" ><span class="text-sm text-white">Calculate</span></button>
+<input class="border-2 mt-1  h-5 w-40 ml-2 " type="number" name="Percentage" id="anserrr">
 </div>
 </div>
 <!-- </div> -->
@@ -100,22 +113,22 @@
 </div>
 
  
- <div class="mx-3 mt-10 sm:text-lg" id="texts">
+ <div class="mx-3 mt-16 sm:text-sm font-medium " id="texts">
  <p>Percentage Formula
   Although the percentage formula can be written in different forms, it is essentially an algebraic equation involving three values.
   
- <p class="text-center mt-2 sm:text-lg " id="texts">P × V1 = V2</p> 
+ <p class="text-center mt-2 sm:text-sm font-medium" id="texts">P × V1 = V2</p> 
   
- <p id="texts sm:text-lg"></p> P is the percentage, V1 is the first value that the percentage will modify, and V2 is the result of the percentage operating on V1. The calculator provided automatically converts the input percentage into a decimal to compute the solution. However, if solving for the percentage, the value returned will be the actual percentage, not its decimal representation.</p>
+ <p id="texts sm:text-sm font-medium"></p> P is the percentage, V1 is the first value that the percentage will modify, and V2 is the result of the percentage operating on V1. The calculator provided automatically converts the input percentage into a decimal to compute the solution. However, if solving for the percentage, the value returned will be the actual percentage, not its decimal representation.</p>
   
-  <p class="text-center mt-2 sm:text-lg" id="texts">EX: P × 30 = 1.5</p> 
+  <p class="text-center mt-2 sm:text-sm font-medium" id="texts">EX: P × 30 = 1.5</p> 
   
   
-  <p class="text-center mt-2 sm:text-lg"  id="texts">P =
+  <p class="text-center mt-2 sm:text-sm font-medium"   id="texts">P =
   1.5
   30
   = 0.05 × 100 = 5%</p> 
-  <p class="mt-2 sm:text-lg" id="texts">If solving manually, the formula requires the percentage in decimal form, so the solution for P needs to be multiplied by 100 in order to convert it to a percent. This is essentially what the calculator above does, except that it accepts inputs in percent rather than decimal form.</p>
+  <p class="mt-2 sm:text-sm font-medium" id="texts">If solving manually, the formula requires the percentage in decimal form, so the solution for P needs to be multiplied by 100 in order to convert it to a percent. This is essentially what the calculator above does, except that it accepts inputs in percent rather than decimal form.</p>
 
 </div>
 <script> 

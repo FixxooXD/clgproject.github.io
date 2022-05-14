@@ -10,10 +10,16 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&family=Oswald&family=Roboto+Condensed:ital@1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+        #calcu{
+            height: 450px;
+            
+        }
         #home{
             font-family: 'Nunito';
         }
@@ -38,11 +44,44 @@
         input{
             font-size: 40px;
         }
-        @media only screen and (max-width: 550px) {
-        #calcu{
-          width: 90%;
+        @media only screen and (max-width: 720px) {
+        #links-div{
+          width: 80%;
         }
     } 
+    @media only screen and (max-width: 320px) {
+        #links-div{
+          width: 100%;
+        }
+    } 
+
+    
+    #new{
+        font-family: Helvetica Neue;
+    }
+
+
+
+
+
+
+
+
+
+
+
+    #links{
+        font-family: 'Abril Fatface';
+    }
+    #calcu{
+        /* background-image: linear-gradient(to right, #C33764, #1D2671); */
+        background-image: linear-gradient(to right, #0F2027, #203A43, #2C5364);
+        /* background-image: linear-gradient(to right, #0f0c29, #302b63, #2C5364);  */
+           /* background-image: linear-gradient(to right, #141E30 , #243B55);     */
+    }
+    /* li{ */
+        /* margin-top: 10px; */
+    /* } */
 
     </style>
     <title>Calculator Home</title>
@@ -51,7 +90,7 @@
     
    <!-- full body -->
    <div class=" flex flex-rowp-2 border-b-2 border-y-green-500 shadow-xl mt-2 ">  
-    <a class="text-2xl sm:text-4xl ml-2 sm:ml-3 absolute" onclick="home()" >HOMEE<span class="text-xs sm:text-xs ">a home of Calculators</span></a>
+    <a class="text-2xl sm:text-4xl ml-2 sm:ml-3 absolute" href="./index.html" >CalQfy<span class="text-xs sm:text-xs ">a home of Calculators</span></a>
     <!-- short contents -->
    <div class="flex flex-row justify-end w-2/4 ml-auto py-2 text-xs sm:text-lg  relative" > 
       <div class="mr-1 ">About</div> 
@@ -64,46 +103,89 @@
         <div><button class="border-2 ml-1 px-1 mr-2 h-5 text-sm " id="search">search</button></div>
     </div>
     <h3 class="underline ml-3 text-xl
-    mt-5  sm:hidden"id="simle" >Basic Calculator</h3>
+    mt-5  sm:hidden font-bold"id="simle" >Basic Calculator</h3>
      <!-- Calculator -->
                                                              
      <div class="flex flex-col sm:flex-row"> 
          
-    <div id="calcu" name="Calculator" class=" flex justify-center items-center  sm:w-1/2 w-4/5 ml-auto mr-auto bg-gray-900  h-96  mt-3 sm:ml-3 " id="n-calcu">
+    <div id="calcu" name="Calculator" class=" flex justify-center items-center shadow-2xl   sm:w-1/2 w-11/12 rounded    ml-auto mr-auto          mt-3 sm:ml-3 " id="n-calcu">
         <div class="grid grid-cols-4  gap-2.5 w-11/12  h-5/6 ">
 
-            <input type="text" class="  font-bold text-gray-500 mb-2 col-span-4  bg-white flex overflow-hidden px-2 " placeholder="0"  id="res"></input>
-            <button class="  flex items-center justify-center bg-white  col-span-2 rounded-md hover:bg-slate-300 transition-all" onclick="document.getElementById('res').value = ''  " id="clear">C</button>
-            <button onclick="clear()" class="flex items-center justify-center rounded-md hover:bg-slate-300 bg-white transition-all duration-100 ease-in" id="del">Del</button>
-            <div onclick="number('/')" class="flex items-center justify-center rounded-md bg-white hover:bg-slate-300 transition-all">/</div>
-            <button type="button" onclick="number('7')"  class="flex items-center rounded justify-center  bg-white hover:bg-slate-300 transition-all">7</button>
-            <button type="button" onclick="number('8')" class="flex items-center rounded justify-center bg-white  hover:bg-slate-300 transition-all">8</button>
-            <button onclick="number('9')" value="9" class="flex items-center rounded justify-center bg-white  hover:bg-slate-300 transition-all">9</button>
-            <button onclick="number('*')" value="*" class=" flex items-center rounded justify-center bg-white hover:bg-slate-300 transition-all">X</button >
-            <button onclick="number('4')" value="4" class="flex items-center rounded justify-center bg-white  hover:bg-slate-300 transition-all">4</button>
-            <button onclick="number('5')" class="flex items-center justify-center bg-white rounded  hover:bg-slate-300 transition-all">5</button>
-            <button onclick="number('6')" class="flex items-center justify-center bg-white rounded  hover:bg-slate-300 transition-all">6</button>
-            <button onclick="number('-')" class="flex items-center justify-center bg-white rounded  hover:bg-slate-300 transition-all">-</button>
-            <button onclick="number('1')" class="flex items-center justify-center  bg-white rounded hover:bg-slate-300 transition-all">1</button>
-            <button onclick="number('2')" class="flex items-center justify-center  bg-white rounded hover:bg-slate-200 transition-all">2</button>
-            <button onclick="number('3')" class="flex items-center justify-center  bg-white rounded hover:bg-slate-300 transition-all">3</button>
-            <button onclick="number('+')" class="flex items-center justify-center  bg-white rounded hover:bg-slate-300 transition-all">+</button>
-            <button onclick="number('0')" class="flex items-center justify-center    bg-white rounded hover:bg-slate-300 transition-all">0</button>
-            <button onclick="number('.')" class="flex items-center justify-center  bg-white rounded hover:bg-slate-300 transition-all">.</button>
-            <button onclick="cal()" class=" bg-green-600 flex items-center justify-center rounded  col-span-2 hover:bg-slate-300 transition-all">=</button>
+            <input type="text" onkeypress='return restrictAlphabets(event)' class="   font-bold text-gray-500 mb-2 border hover:border-blue-400    col-span-4   bg-white  overflow-hidden px-4 " placeholder="0" placeholder="1"  id="res"></input>
+            <button class="  flex items-center justify-center  bg-white  col-span-2 rounded-md hover:bg-slate-300 transition-all  " onclick="document.getElementById('res').value = ''  " id="clear"><i class="fa-solid fa-c"></i></button>
+
+            <button onclick="clear()" class="  flex items-center justify-center rounded-md hover:bg-slate-300 bg-white transition-all duration-100 ease-in font-medium" id="del">Del</button>
+
+            <div onclick="number('/')" class="flex items-center justify-center rounded-md bg-white hover:bg-slate-300 transition-all"><i class="fa-solid fa-divide"></i></div>
+
+            <button type="button" onclick="number('7')"  class="flex items-center rounded justify-center  bg-white hover:bg-slate-300 transition-all"><i class="fa-solid fa-7"></i></button>
+
+            <button type="button" onclick="number('8')" class="flex items-center rounded justify-center bg-white  hover:bg-slate-300 transition-all"><i class="fa-solid fa-8"></i></button>
+
+            <button onclick="number('9')" value="9" class="flex items-center rounded justify-center bg-white  hover:bg-slate-300 transition-all"><i class="fa-solid fa-9"></i></button>
+
+            <button onclick="number('*')" value="*" class=" flex items-center rounded justify-center bg-white hover:bg-slate-300 transition-all"><i class="fa-solid fa-xmark"></i></button >
+
+            <button onclick="number('4')" value="4" class="flex items-center rounded justify-center bg-white  hover:bg-slate-300 transition-all"><i class="fa-solid fa-4"></i></button>
+
+            <button onclick="number('5')" class="flex items-center justify-center bg-white rounded  hover:bg-slate-300 transition-all"><i class="fa-solid fa-5"></i></button>
+
+            <button onclick="number('6')" class="flex items-center justify-center bg-white rounded  hover:bg-slate-300 transition-all"><i class="fa-solid fa-6"></i></button>
+
+            <button onclick="number('-')" class="flex items-center justify-center bg-white rounded  hover:bg-slate-300 transition-all"><i class="fa-solid fa-minus"></i></button>
+
+            <button onclick="number('1')" class="flex items-center justify-center  bg-white rounded hover:bg-slate-300 transition-all"><i class="fa-solid fa-1"></i></button>
+
+            <button onclick="number('2')" class="flex items-center justify-center  bg-white rounded hover:bg-slate-200 transition-all"><i class="fa-solid fa-2"></i></button>
+
+            <button onclick="number('3')" class="flex items-center justify-center  bg-white rounded hover:bg-slate-300 transition-all"><i class="fa-solid fa-3"></i></button>
+
+            <button onclick="number('+')" class="flex items-center justify-center  bg-white rounded hover:bg-slate-300 transition-all"><i class="fa-solid fa-plus"></i></button>
+
+            <button onclick="number('0')" class="flex items-center justify-center    bg-white rounded hover:bg-slate-300 transition-all"><i class="fa-solid fa-0"></i></button>
+
+            <button onclick="number('.')" class="flex items-center justify-center font-black  bg-white rounded hover:bg-slate-300 transition-all">.</button>
+
+            <button id="equal" onclick="cal()" class="  bg-green-500 flex items-center justify-center rounded  col-span-2 hover:bg-slate-300 transition-all"><i class="fa-solid fa-equals"></i></button>
         </div> 
         </div>
         <div class="text-sm sm:text-lg sm:w-1/2 " id="simple_calc">
-            <h1 class="underline hidden  text-xl  sm:block m-4">Basic Calculator</h1>
-            <p class="mt-3 mx-2   ">This is a simple basic calculator with memory functions similar to a small handheld calculator. Use this basic calculator online for math with addition, subtraction, division and multiplication. Memory and clear functions for this standard calculator are listed below.</p> </div>
+            <h1 class="underline hidden  text-xl font-bold tracking-wide  sm:block m-4">Basic Calculator</h1>
+            <p class="mt-5 mx-2 sm:text-lg  px-1  ">This is a simple basic calculator with memory functions similar to a small handheld calculator. Use this basic calculator online for math with addition, subtraction, division and multiplication. All the functions for this calculator are listed below .</p> 
+            <ul class="ml-8 mt-4  list-disc">
+               <li><i class="fa-solid fa-c"></i> = Clear all</li>
+               <li><span class="font-medium font-sans">Del</span> = to delete one character at a time  from the right end of the display</li>
+               <li><i class="fa-solid fa-divide"></i> = to perform division operation </li>
+               <li><i class="fa-solid fa-xmark"></i> = to perform multiplication operation</li>
+               <li><i class="fa-solid fa-minus"></i> = to perform Subtraction operation</li>
+               <li><i class="fa-solid fa-plus"></i> = to perform addition operation</li>
+               <li><i class="fa-solid fa-equals"></i> = ?</li>
+               
+            </ul>
+        </div>
  </div>
 
         </div>
 
-        <div class="mt-4 p-6">
-            <a class="" href="../Scintific .html" target="_blank">Sciencetific</a>
-            <a href="./ageee.html" target="_blank">age</a>
-            <a href="./percentage.html" target="_blank">percentage </a>
+        <div id="links" class="mt-4 ml-2 p-6 flex flex-col justify-between  sm:w-fit  ">
+            <P class="ml-18 font-bold ">Other Calculator</p>
+
+            <div id="links-div" class=" w-3/5 mt-4 sm:mt-0 border-0 hover:border-2 transition-all sm:p-3">
+            <a class="" href="../Scintific .html" target="_blank"><span class="hover:underline underline sm:no-underline font-bold">Scientific calculator</span>
+            <P class="hidden sm:block">This is an online scientific calculator with double-digit precision that supports both button click and keyboard type.</p>
+                </a>
+            </div>
+
+            <div id="links-div" class=" w-3/5 mt-4 sm:mt-3 border-0 hover:border-2 transition-all sm:p-3 ">
+            <a href="./ageee.html" target="_blank"> <span id="new" class="hover:underline underline sm:no-underline font-bold">Age Calculator</span>
+            <P class="hidden sm:block">This free age calculator computes age in terms of years, months, weeks, days, hours, minutes, and seconds, given a date of birth.</P>
+        </a>
+            </div>
+        <div id="links-div" class=" w-3/5 mt-4 sm:mt-3 border-0 hover:border-2 transition-all sm:p-3" >
+            <a class="" href="./percentage.html" target="_blank"><span class="hover:underline underline sm:no-underline font-bold" >Percentage calculator</span>
+            <P class="hidden sm:block">The percentage can be defined as the dimensionless ratio of two numbers.This free percentage calculator computes a number of values involving percentages, including the percentage difference between two given values.</P>
+        </a>
+        </div>
         </div>
         <div class="m-2" >
             <h2 class="underline mt-5" id="objectives"> Primary Objective</h2>
@@ -111,10 +193,6 @@
         
                 <p id="down"> coded and developed each calculator individually and put each one through strict, comprehensive testing. However, please inform us if you notice even the slightest error</p>
             </p>
-        </div>
-        </div>
-        
-
 
 
 

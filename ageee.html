@@ -65,7 +65,7 @@
  <body>
      <!-- full body -->
      <div class=" flex flex-rowp-2 border-b-2 border-y-green-500 shadow-xl mt-2 ">  
-        <a class="text-2xl sm:text-4xl ml-2 sm:ml-3 absolute ">HOMEE<span class="text-xs sm:text-xs ">a home of Calculators</span></a>
+        <a class="text-2xl sm:text-4xl ml-2 sm:ml-3 absolute" href="./index.html">CalQfy<span class="text-xs sm:text-xs ">a home of Calculators</span></a>
         <!-- short contents -->
        <div class="flex flex-row justify-end w-2/4 ml-auto py-2 text-xs sm:text-lg  relative" > 
           <div class="mr-1 ">About</div> 
@@ -122,12 +122,14 @@
     function ageCalculate(){
         let today = new Date();
         let inputDate = new Date(document.getElementById("date-input").value);
+        console.log(document.getElementById("date-input").value);
         let birthMonth,birthDate,birthYear;
         let birthDetails = {
             date:inputDate.getDate(),
             month:inputDate.getMonth()+1,
             year:inputDate.getFullYear()
         }
+        console.log(inputDate.getMonth());
         let currentYear = today.getFullYear();
         let currentMonth = today.getMonth()+1;
         let currentDate = today.getDate();
