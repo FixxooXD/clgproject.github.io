@@ -127,7 +127,7 @@ input[type=number] {
 
     <div class="flex flex-row mt-3 sm:ml-10 sm:justify-center  w-4/6">
     <button class=" mt-1  sm:mt-3 px-2  bg-orange-400 w-20 h-8 rounded-md ml-3" onclick="persent()" ><span class="text-sm text-white">Calculate</span></button>
-    <button class="h-8 rounded-md  w-20 border-2 mx-2 mt-1 sm:mt-3">Clear</button>
+    <button id="clear" class="h-8 rounded-md  w-20 border-2 mx-2 mt-1 sm:mt-3">Clear</button>
     <input class="shadow-md text-sm  sm:h-7 sm:mt-3  sm:w-36 sm:ml-3 border-2 mt-1 sm:h8  h-5 w-40 ml-2" type="text" name="Percentage" id="ans">
 </div>
 </div>
@@ -141,7 +141,7 @@ input[type=number] {
 </div>
 <div class="flex flex-row mt-3 sm:mt-4 sm:justify-center   w-4/6">
 <button class=" mt-1  px-2  bg-orange-400 w-20 h-8 rounded-md  ml-3 sm:ml-16  " onclick="val()" ><span class="text-sm text-white">Calculate</span></button>
-<button class="h-8 rounded-md  w-20 border-2 mx-2 mt-1">Clear</button>
+<button id="_clear"  class="h-8 rounded-md  w-20 border-2 mx-2 mt-1">Clear</button>
 <input  class="shadow-md  border-2 mt-1 sm:h8 h-5 w-40 ml-2 sm:h-7  sm:w-36" type="number" name="Percentage" id="anserrr">
 </div>
 </div>
@@ -187,6 +187,26 @@ input[type=number] {
 
   </footer>
 <script> 
+
+const clrBtn = document.getElementById("clear");
+const clrBtnn = document.getElementById("_clear");
+
+
+
+clrBtn.addEventListener("click", function() {
+  document.getElementById('ans').value = '';
+  document.getElementById('value1').value = '';
+  document.getElementById('value2').value = '';
+});
+
+clrBtnn.addEventListener("click", function() {
+  document.getElementById('anserrr').value = '';
+  document.getElementById('value3').value = '';
+  document.getElementById('value4').value = '';
+});
+
+
+
  
  function persent(){
    let num1 = document.getElementById('value1').value;
@@ -199,6 +219,18 @@ input[type=number] {
       let num4 = document.getElementById('value4').value;
       document.getElementById('anserrr').value= (num3/100)*num4;
   }
+
+
+  // clrBtn.addEventListener('click',function(){
+    // document.getElementById('anserrr').value = '';
+  
+//  });
+
+// function clear(){
+//   document.getElementById('anserrr').value = '';
+  
+// }
+
 
    
    

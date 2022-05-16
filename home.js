@@ -24,10 +24,6 @@ function number(input){
 
 
 
- function home(){
-        window.location.href = "./index.html";
-        
- }
 
  function restrictAlphabets(e) {
   var x = e.which || e.keycode;
