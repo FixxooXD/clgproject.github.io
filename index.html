@@ -16,6 +16,11 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+
+body{
+    /* background-image: linear-gradient(to right, #0F2027, #203A43, #2C5364);   */
+}
+
         #calcu{
             height: 450px;
             
@@ -24,13 +29,13 @@
             font-family: 'Nunito';
         }
         #down{
-            font-family: 'Roboto Condensed', sans-serif;
+            font-family: ' Nunito', sans-serif;
         }
         #simple_calc{
-            font-family: 'Roboto Condensed', sans-serif;
+            font-family: 'Nunito', sans-serif;
         }
         #search{
-            font-family: 'Roboto Condensed', sans-serif;
+            font-family: 'Nunito', sans-serif;
         }
         #objectives{
             font-family: 'Nunito';
@@ -111,7 +116,7 @@
     <div id="calcu" name="Calculator" class=" flex justify-center items-center shadow-2xl   sm:w-1/2 w-11/12 rounded    ml-auto mr-auto          mt-3 sm:ml-3 " id="n-calcu">
         <div class="grid grid-cols-4  gap-2.5 w-11/12  h-5/6 ">
 
-            <input type="text" onkeypress='return restrictAlphabets(event)' class="   font-bold text-gray-500 mb-2 border hover:border-blue-400    col-span-4   bg-white  overflow-hidden px-4 " placeholder="0" placeholder="1"  id="res"></input>
+            <input type="text" onkeypress='return restrictAlphabets(event)' class="font-bold text-gray-500 mb-2 border hover:border-blue-400    col-span-4   bg-white  overflow-hidden px-4 " placeholder="0" placeholder="1"  id="res"></input>
             <button class="  flex items-center justify-center  bg-white  col-span-2 rounded-md hover:bg-slate-300 transition-all  " onclick="document.getElementById('res').value = ''  " id="clear"><i class="fa-solid fa-c"></i></button>
 
             <button  class="  flex items-center justify-center rounded-md hover:bg-slate-300 bg-white transition-all duration-100 ease-in font-medium" id="del">Del</button>
@@ -167,28 +172,28 @@
 
         </div>
 
-        <div id="links" class="mt-4 ml-2 p-6 flex flex-col justify-between  sm:w-fit   ">
-            <P class="ml-18 font-bold ">Other Calculator</p>
+        <div  class="mt-4 ml-2 p-6 flex flex-col justify-between  sm:w-fit   ">
+            <P id="simple_calc " class="ml-18 underline  text-2xl">Other calculators</p>
 
             <div id="links-div" class=" w-3/5 mt-4 sm:mt-0  border-transparent hover:border-2  transition-all sm:p-3">
-            <a class="" href="../Scintific .html" target="_blank"><span class="hover:underline underline sm:no-underline font-bold">Scientific calculator</span>
-            <P class="hidden sm:block">This is an online scientific calculator with double-digit precision that supports both button click and keyboard type.</p>
+            <a class="" href="../Scintific .html" target="_blank"><span id="simple_calc" class="hover:underline underline sm:no-underline font-bold">Scientific calculator</span>
+            <P id="simple_calc" class="hidden sm:block">This is an online scientific calculator with double-digit precision that supports both button click and keyboard type.</p>
                 </a>
             </div>
 
             <div id="links-div" class=" w-3/5 mt-4 sm:mt-3 border-transparent hover:border-2 transition-all sm:p-3 ">
-            <a href="./ageee.html" target="_blank"> <span id="new" class="hover:underline underline sm:no-underline font-bold">Age Calculator</span>
-            <P class="hidden sm:block">This free age calculator computes age in terms of years, months, weeks, days, hours, minutes, and seconds, given a date of birth.</P>
+            <a href="./ageee.html" target="_blank"> <span id="simple_calc"  class="hover:underline underline sm:no-underline font-bold">Age Calculator</span>
+            <P  id="simple_calc" class="hidden sm:block">This free age calculator computes age in terms of years, months, weeks, days, hours, minutes, and seconds, given a date of birth.</P>
         </a>
             </div>
         <div id="links-div" class=" w-3/5 mt-4 sm:mt-3 border-transparent hover:border-2 transition-all sm:p-3" >
-            <a class="" href="./percentage.html" target="_blank"><span class="hover:underline underline sm:no-underline font-bold" >Percentage calculator</span>
-            <P class="hidden sm:block">The percentage can be defined as the dimensionless ratio of two numbers.This free percentage calculator computes a number of values involving percentages, including the percentage difference between two given values.</P>
+            <a class="" href="./percentage.html" target="_blank"><span id="simple_calc" class="hover:underline underline sm:no-underline font-bold" >Percentage calculator</span>
+            <P id="simle" class="hidden sm:block">The percentage can be defined as the dimensionless ratio of two numbers.This free percentage calculator computes a number of values involving percentages, including the percentage difference between two given values.</P>
         </a>
         </div>
         </div>
         <div class="m-2" >
-            <h2 class="underline mt-5" id="objectives"> Primary Objective</h2>
+            <h2 class="underline mt-5 font-bold  tracking-wider text-xl" id="simple_calc"> Primary Objective</h2>
             <p id="down" >This website is fully focuses is to provide fast, comprehensive, convenient, free online calculators in a plethora of areas to help you "do the math" quickly in areas.. Additionally, we believe the internet should be a source of free information. Therefore, all of our tools and services are completely free, with no registration required.</p>
         
                 <p id="down"> coded and developed each calculator individually and put each one through strict, comprehensive testing. However, please inform us if you notice even the slightest error</p>

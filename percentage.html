@@ -16,12 +16,22 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:wght@600&family=Nunito:wght@500&family=Oleo+Script:wght@700&family=Oswald&family=Roboto+Condensed:ital,wght@0,300;1,300;1,400&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:wght@100;300;600&family=Nunito+Sans:ital,wght@1,300&family=Nunito:wght@500&family=Oleo+Script:wght@700&family=Oswald&family=Roboto+Condensed:ital,wght@0,300;1,300;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:wght@100;300;600&family=Nunito+Sans:ital,wght@0,300;1,300&family=Nunito:wght@500&family=Oleo+Script:wght@700&family=Oswald&family=Roboto+Condensed:ital,wght@0,300;1,300;1,400&family=Roboto+Flex:opsz,wght@8..144,200&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Alegreya+Sans:wght@300&family=Montserrat:wght@100;300;600&family=Nunito+Sans:ital,wght@0,300;1,300&family=Nunito:wght@500&family=Oleo+Script:wght@700&family=Oswald&family=Roboto+Condensed:ital,wght@0,300;1,300;1,400&family=Roboto+Flex:opsz,wght@8..144,200&display=swap" rel="stylesheet">
     
     
     <title>Percentage Calculator</title>
     <style>
-    
-    
+    #texts{
+      font-family: 'Nunito';
+    }
+       #anserrr,#value1, #value2, #ans,#value3,#value4{
+         font-family:roboto;
+       }
+
+
+
+
     #Box-1{
           width: 50%;
           font-family: 'Nunito Sans';
@@ -50,6 +60,7 @@
         }
         footer{
           width:90%;
+          font-famil
         }
 
   }
@@ -93,7 +104,10 @@
         }
   }
 
-
+  input {
+  text-align: center;
+  
+}
 
 
 /* To Remove the  arrowns in input type text */
@@ -129,36 +143,36 @@ input[type=number] {
  </div>
    </div>
    <h1  id="heading" class="mt-4 ml-5 font-bold sm:text-3xl underline">Percentage Calculator</h1>
-   <p class="mt-3 ml-5 sm:text-lg" id="texts">Please provide any two values below and click the "Calculate" button to get the third value.</p>
+   <p class="mt-3 ml-5 sm:text-lg" id="texts">Please provide any two values below and click the "Calculate" button to get the third value & click "Clear" to clear all values.</p>
    <div id="body" class="flex flex-col justify-center  items-center mt-5 mx-2 h-full ">
 
 
     <!-- value -->
     <div id="Box-1" class="border-2 rounded-lg mt-3 h-32 mr-20 shadow-lg ">
       <div class="flex flex-row mt-2 " id="inner-box">
-    <p class="sm:ml-8 pl-3 sm:mt-3" ><span class="text  font-bold  sm:text-xl sm:p-4 ">Value</span> <input class="shadow-md sm:h8 border-2 w-32 h-5 sm:h-7  shadow-black-500/50 " placeholder="value ?" type="number" name="MarkSecured" id="value1"></p>
-    <p class="sm:mt-3 ml-3"><span class="text mx-1  mt-2  font-bold  sm:text-xl" >Out Of</span> <input class=" border-2 w-32 h-5 shadow-md sm:h-7  sm:w-36" type="number" name="Total" id="value2"></p>
+    <p class="sm:ml-8 pl-3 sm:mt-3" ><span class="text  font-bold  sm:text-xl sm:p-4 ">Value</span> <input class="shadow-md sm:h8 border-2 w-32 h-5 sm:h-7  sm:w-40 shadow-black-500/50 " placeholder="value ?" type="number" name="MarkSecured" id="value1"></p>
+    <p class="sm:mt-3 ml-3 sm:ml-6"><span class="text mx-1  mt-2  font-bold  sm:text-xl" >Out Of</span> <input class=" border-2 w-32 h-5 shadow-md sm:h-7  sm:w-40" type="number" name="Total" id="value2"></p>
   </div>
 
     <div class="flex flex-row mt-3 sm:ml-10 sm:justify-center  w-4/6">
     <button class=" mt-1  sm:mt-3 px-2  bg-orange-400 w-20 h-8 rounded-md ml-3" onclick="persent()" ><span class="text-sm text-white">Calculate</span></button>
-    <button id="clear" class="h-8 rounded-md  w-20 border-2 mx-2 mt-1 sm:mt-3">Clear</button>
-    <input class="shadow-md text-sm  sm:h-7 sm:mt-3  sm:w-36 sm:ml-3 border-2 mt-1 sm:h8  h-5 w-40 ml-2" type="text" name="Percentage" id="ans">
+    <button id="clear" class="h-8 rounded-md  w-20 border-2 mx-1 mt-1 sm:mt-3 sm:mx-3  px-1   "><span class="text-sm ">Clear</span></button>
+    <input class="shadow-md text-sm  sm:h-7 sm:mt-3  sm:w-40 sm:ml-3 border-2 mt-1 sm:h8  h-5 w-36 ml-2" type="text" name="Percentage" id="ans">
 </div>
 </div>
 
 <!-- Percentage -->
   
-<div id="Box-1" class="border-2 rounded-lg mt-3 h-32 mr-20 shadow-lg ">
+<div id="Box-1" class="border-2 rounded-lg mt-5 h-32 mr-20 shadow-lg  z-10 overflow-hidden">
   <div class="flex flex-row mt-2 " id="inner-box">
-<p class="sm:ml-8 pl-3 sm:mt-3" ><span class="text  font-bold  sm:text-xl sm:p-4 "><i class="fa-solid fa-percent"></i></span> <input class="shadow-md sm:h8 border-2 w-32 h-5 sm:h-7  shadow-black-500/50 " placeholder="value ?" type="number" name="MarkSecured" id="value3"></p>
-<p class="sm:mt-3 ml-3"><span class="text mx-1  mt-2  font-bold  sm:text-xl" >Out Of</span> <input class=" border-2 w-32 h-5 shadow-md sm:h-7  sm:w-36" type="number" name="Total" id="value4"></p>
+<p class="sm:ml-8 pl-3 sm:mt-3" ><span class="text  font-bold  sm:text-xl sm:p-4 "><i class="fa-solid fa-percent"></i></span> <input class="shadow-md sm:h8 border-2 w-32 h-5 sm:h-7 sm:w-40 shadow-black-500/50 " placeholder="value ?" type="number" name="MarkSecured" id="value3"></p>
+<p class="sm:mt-3 ml-3 sm:ml-7"><span class="text mx-1  mt-2  font-bold  sm:text-xl z-0 " >Out Of</span> <input class=" border-2 w-32 h-5 shadow-md sm:h-7  sm:w-40" type="number" name="Total" id="value4"></p>
 </div>
 
 <div class="flex flex-row mt-3 sm:ml-10 sm:justify-center  w-4/6">
 <button id="calcuBtn" class=" mt-1  sm:mt-3 px-2  bg-orange-400 w-20 h-8 rounded-md ml-3" onclick="val()" ><span class="text-sm text-white">Calculate</span></button>
-<button id="_clear" class="h-8 rounded-md  w-20 border-2 mx-2 mt-1 sm:mt-3">Clear</button>
-<input class="shadow-md text-sm  sm:h-7 sm:mt-3  sm:w-36 sm:ml-3 border-2 mt-1 sm:h8  h-5 w-40 ml-2" type="text" name="Percentage" id="anserrr">
+<button id="_clear" class="h-8 rounded-md  w-20 border-2 mx-1 mt-1 sm:mt-3 px-1 sm:mx-3"> <span class="text-sm ">Clear</span></button>
+<input class="shadow-md text-sm  sm:h-7 sm:mt-3  sm:w-40 sm:ml-3 border-2 mt-1 sm:h8  h-5 w-36 ml-2" type="text" name="Percentage" id="anserrr">
 </div>
 </div>
 
@@ -169,28 +183,28 @@ input[type=number] {
 </div>
 
  
- <footer class=" mx-3  mt-16 sm:w-w-4/5 sm:ml-10 " id="texts">
-  <span class="text-lg text-bold mr-5">Percentage Formula</span>
- <p class="text-sm" >Although the percentage formula can be written in different forms, it is essentially an algebraic equation involving three values.</p>
-     <p class="text-center mt-2 sm:text-xs font-medium text-bold ml-4" id="texts">P × V1 = V2</p> 
+ <footer class="mx-3  mt-16 sm:w-w-4/5 sm:ml-6 " id="texts">
+  <span id="texts" class="text-lg font-bold mr-5">Percentage Formula</span>
+ <p id="texts" class="" >Although the percentage formula can be written in different forms, it is essentially an algebraic equation involving three values.</p>
+     <p id="texts" class="text-center mt-2  ml-4" id="texts">P × V1 = V2</p> 
   
-  <p class="text-sm">P is the percentage, V1 is the first value that the percentage will modify, and V2 is the result of the percentage operating on V1. The calculator provided automatically converts the input percentage into a decimal to compute the solution. However, if solving for the percentage, the value returned will be the actual percentage, not its decimal representation.</p>
-  <p class="text-center mt-2 sm:text-xs font-medium" id="texts">EX: P × 30 = 1.5</p> 
-  <p class="text-center mt-2 sm:text-xs font-medium"   id="texts">P =
+  <p id="texts" class="">P is the percentage, V1 is the first value that the percentage will modify, and V2 is the result of the percentage operating on V1. The calculator provided automatically converts the input percentage into a decimal to compute the solution. However, if solving for the percentage, the value returned will be the actual percentage, not its decimal representation.</p>
+  <p id="texts" class="text-center mt-2 " id="texts">EX: P × 30 = 1.5</p> 
+  <p id="texts" class="text-center mt-2"   id="texts">P =
   1.5/
   30
   = 0.05 × 100 = 5%</p> 
-  <p class="text-sm id="texts">If solving manually, the formula requires the percentage in decimal form, so the solution for P needs to be multiplied by 100 in order to convert it to a percent. This is essentially what the calculator above does, except that it accepts inputs in percent rather than decimal form.</p>
+  <p id="texts" class="" id="texts">If solving manually, the formula requires the percentage in decimal form, so the solution for P needs to be multiplied by 100 in order to convert it to a percent. This is essentially what the calculator above does, except that it accepts inputs in percent rather than decimal form.</p>
 
 
-  <p class="mt-5"><span class="text-lg text-bold mt-5">Percentage Difference Formula</span>
-<p class="text-sm mt-3">The percentage difference between two values is calculated by dividing the absolute value of the difference between two numbers by the average of those two numbers. Multiplying the result by 100 will yield the solution in percent, rather than decimal form. Refer to the equation below for clarification.</p>
+  <p id="texts" class="mt-5"><span class="font-bold text-lg  mt-5">Percentage Difference Formula</span>
+<p id="texts" class=" mt-3">The percentage difference between two values is calculated by dividing the absolute value of the difference between two numbers by the average of those two numbers. Multiplying the result by 100 will yield the solution in percent, rather than decimal form. Refer to the equation below for clarification.</p>
 
-<P class="text-center mt-2 sm:text-xs font-medium text-bold"> Percentage Difference =	  
+<P id="texts" class="text-center mt-2 "> Percentage Difference =	  
   |V1 - V2|/
 (V1 + V2)/2
 × 100</P>
-<P class="text-center mt-2 sm:text-xs font-medium text-bold mb-10">EX:	
+<P id="texts"  class="sm:text-center mt-2   mb-10">EX:	
 |10 - 6|/
 (10 + 6)/2
 =	
