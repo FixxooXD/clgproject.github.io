@@ -5,7 +5,9 @@ module.exports = {
   './agecalc.html',
  './percentage.html',
 './pres.html',
-'./ageee.html',],
+'./ageee.html',
+ './scientific.html',
+   ',/scientificcc.html',],
   theme: {
     extend: {},
   },

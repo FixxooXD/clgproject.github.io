@@ -6,7 +6,7 @@
     "build-css": "tailwindcss build ./src/style.css -o ./tailwind.css"
   },
   "keywords": [],
-  "author": "",
+  "author": "Raj_Fixxoo",
   "license": "ISC",
   "devDependencies": {
     "tailwindcss": "^3.0.24"

@@ -1,0 +1,306 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tailwind.css"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&family=Oswald&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&family=Oswald&family=Roboto+Condensed:ital@1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+<title>my scientific</title>
+<!-- BTW PEEPS, I FOUND A COUPLE BUGS AND PROBABLY WILL FIX THEM MID MARCH HAHA BECAUSE IT'S 1ST WEEK OF SCHOOL -->
+<style>
+   
+p {font-size: 0px}
+input { border-2px; font-size: 25px; font-weight: bold; padding: 0px 5px}
+#shiftBtn {background-color: yellow}
+#head{
+    font-family: ' Nunito', sans-serif;
+}
+</style>
+</head>
+<body> 
+     <!-- full body -->
+   <div class=" flex flex-rowp-2 border-b-2 border-y-green-500 shadow-xl mt-2 ">  
+    <a class="text-2xl sm:text-4xl ml-2 sm:ml-3 absolute" href="./index.html" >CalQfy<span class="text-xs sm:text-xs ">a home of Calculators</span></a>
+    <!-- short contents -->
+   <div class="flex flex-row justify-end w-2/4 ml-auto py-2 text-xs sm:text-lg  relative" > 
+      <div class="mr-1 ">About</div> 
+      <div>Contacts</div> 
+ </div>
+   </div>
+     <div class="mt-2">
+        <div class="flex flex-row justify-end" >
+        <input class="border-2 w-32 sm:w-40 h-5" type="search" name="search" id="">
+        <div><button class="border-2 ml-1 px-1 mr-2 h-5 text-sm " id="search">search</button></div>
+    </div>
+
+    <p id="head" class="text-2xl mb-2 ml-4 underline">Scientific Calculator</p>
+    <span class="ml-4 mb-2">This is an online javascript scientific calculator. You can click the buttons or type to perform calculations as you would on a physical calculator.</span>
+<p id=myPara></p>
+<p id=myAns>0</p>
+
+<div class="grid grid-cols-5 border-2 w-2/3 gap-1.5 ml-auto mr-auto pb-2 px-4 py-2 mt-4 rounded-md" >
+    
+    <input  id=result colspan=5 class="col-span-5 text-right border-2 py-2 ">
+    
+        
+    
+    <button class="border-2 py-1" onclick="shiftFn(1)" id=shiftBtn>Shift</button>
+    <button class="border-2" onclick="trigo('sin')">sin</button>
+    <button class="border-2" onclick="trigo('cos')">cos</button>
+    <button class="border-2" onclick="trigo('tan')">tan</button>
+    <button class="border-2" onclick="input('!')">!</button>
+    
+    
+    <button class="border-2 py-1" onclick="input('^(')">^</button>
+    <button class="border-2" onclick="sqrt()">sqrt</button>
+    <button class="border-2" onclick="leftParen()">(</button>
+    <button class="border-2" onclick="input(')')">)</button>
+    <button class="border-2" onclick="log(1)">log</button>
+    
+    
+    <button class="border-2 py-1" onclick="input('7')">7</button>
+    <button class="border-2" onclick="input('8')">8</button>
+    <button class="border-2" onclick="input('9')">9</button>
+    <button class="border-2" onclick="del()">DEL</button>
+    <button class="border-2" onclick="ac()">AC</button>
+   
+    
+    <button class="border-2 py-1" onclick="input('4')">4</button>
+    <button class="border-2" onclick="input('5')">5</button>
+    <button class="border-2" onclick="input('6')">6</button>
+    <button class="border-2" onclick="multOrDiv('mult')">&#x00D7;</button>
+    <button class="border-2" onclick="multOrDiv('div')">&#x00F7;</button>
+    
+     
+    <button class="border-2 py-1" onclick="input('1')">1</button>
+    <button class="border-2" onclick="input('2')">2</button>
+    <button class="border-2" class="border-2" onclick="input('3')">3</button>
+    <button class="border-2" onclick="input('+')">+</button>
+    <button class="border-2" onclick="input('-')">-</button>
+    
+    <button class="border-2 py-1" onclick="input('0')">0</button>
+    <button class="border-2" onclick="input('.')">.</button>
+    <button class="border-2" onclick="piOrE('pi')">&#x03C0;</button>
+    <button class="border-2" onclick="ans()">Ans</button>
+    <button class="border-2" onclick="equal()">=</button>
+    
+</div>
+<P></div>P>
+
+<script>
+    function shiftFn(ken) {
+    var shift = document.getElementById("shiftBtn") ;
+    var arr = document.getElementsByTagName("td") ;
+    if (ken == 1) {
+        shift.setAttribute("onclick", "shiftFn(0)") ;
+        shift.style.backgroundColor = "orange" ;
+        arr[2].innerHTML = "sin<sup>-1</sup>" ;
+        arr[2].setAttribute("onclick", "trigo1('sin')") ;
+        arr[3].innerHTML = "cos<sup>-1</sup>" ;
+        arr[3].setAttribute("onclick", "trigo1('cos')") ;
+        arr[4].innerHTML = "tan<sup>-1</sup>" ;
+        arr[4].setAttribute("onclick", "trigo1('tan')") ;
+        arr[10].innerHTML = "ln" ;
+        arr[10].setAttribute("onclick", "log(0)") ;
+        arr[28].innerHTML = "\u0065" ;
+        arr[28].setAttribute("onclick", "piOrE('e')") ;
+    } else {
+        shift.setAttribute("onclick", "shiftFn(1)") ;
+        shift.style.backgroundColor = "yellow" ;
+        arr[2].innerHTML = "sin" ;
+        arr[2].setAttribute("onclick", "trigo('sin')") ;
+        arr[3].innerHTML = "cos" ;
+        arr[3].setAttribute("onclick", "trigo('cos')") ;
+        arr[4].innerHTML = "tan" ;
+        arr[4].setAttribute("onclick", "trigo('tan')") ;
+        arr[10].innerHTML = "log" ;
+        arr[10].setAttribute("onclick", "log(1)") ;
+        arr[28].innerHTML = "\u03C0" ;
+        arr[28].setAttribute("onclick", "piOrE('pi')") ;
+    }
+}
+
+function input(sun) {
+    var x = document.getElementById("result") ;
+    var y = document.getElementById("myPara") ;
+    x.value += sun ;
+    y.innerHTML += sun ;
+}
+
+function factorial(shirious) {
+    if (Number.isInteger(shirious)) {
+        if (shirious < 2) return 1 ;
+        return shirious * factorial(shirious - 1) ;
+    }
+}
+
+function sqrt() {
+    var x = document.getElementById("result") ;
+    var y = document.getElementById("myPara") ;
+    x.value += "sqrt(" ;
+    y.innerHTML += (/[\d)IE]/.test(y.innerHTML.slice(-1))) ? 
+    " * Math.sqrt(" : "Math.sqrt(" ;
+}
+
+function leftParen() {
+    var x = document.getElementById("result") ;
+    var y = document.getElementById("myPara") ;
+    x.value += "(" ;
+    y.innerHTML += (/[\d)IE]/.test(y.innerHTML.slice(-1))) ? 
+    " * (" : "(" ;
+}
+
+function piOrE(lunar) {
+    var x = document.getElementById("result") ;
+    var y = document.getElementById("myPara") ;
+    if (lunar == "pi") {
+        x.value += "\u03C0" ;
+        y.innerHTML += (/[\d)IE]/.test(y.innerHTML.slice(-1))) ? 
+        " * Math.PI" : "Math.PI" ;
+    } else {
+        x.value += "\u0065" ;
+        y.innerHTML += (/[\d)IE]/.test(y.innerHTML.slice(-1))) ? 
+        " * Math.E" : "Math.E" ;
+    }
+}
+
+function log(jafca) {
+    var x = document.getElementById("result") ;
+    var y = document.getElementById("myPara") ;
+    if (jafca == 1) {
+        x.value += "log(" ;
+        y.innerHTML += (/[\d)IE]/.test(y.innerHTML.slice(-1))) ? 
+        " * Math.log10(" : "Math.log10(" ;
+    } else {
+        x.value += "ln(" ;
+        y.innerHTML += (/[\d)IE]/.test(y.innerHTML.slice(-1))) ? 
+        " * Math.log(" : "Math.log(" ;
+    }
+}
+
+function trigo(hatsyrei) {
+    var x = document.getElementById("result") ;
+    var y = document.getElementById("myPara") ;
+    x.value += hatsyrei + "(" ;
+    y.innerHTML += (/[\d)IE]/.test(y.innerHTML.slice(-1))) ? 
+    " * Math." + hatsyrei + "(Math.PI / 180 * " : "Math." + hatsyrei + "(Math.PI / 180 * " ;
+}
+
+function trigo1(valentin) {
+    var x = document.getElementById("result") ;
+    var y = document.getElementById("myPara") ;
+    x.value += valentin + "\u207B\u00B9("
+    y.innerHTML += (/[\d)IE]/.test(y.innerHTML.slice(-1))) ? 
+    " * 180 / Math.PI * Math.a" + valentin + "(" : "180 / Math.PI * Math.a" + valentin + "(" ;
+}
+
+function multOrDiv(edward) {
+    var x = document.getElementById("result") ;
+    var y = document.getElementById("myPara") ;
+    console.log(y);
+    if (edward == "mult") {
+        x.value += "\u00D7" ;
+        y.innerHTML += "*" ;
+    } else {
+        x.value += "\u00F7" ;
+        y.innerHTML += "/"
+    }
+}
+
+function del() {
+    var x = document.getElementById("result") ;
+    var y = document.getElementById("myPara") ;
+    var z = document.getElementById("myAns") ;
+    if (x.value.slice(-3) == "Ans") {
+        y.innerHTML = (/[\d)IE]/.test(x.value.slice(-4, -3))) ? 
+        y.innerHTML.slice(0, -(z.innerHTML.length + 3)) : y.innerHTML.slice(0, -(z.innerHTML.length)) ;
+        x.value = x.value.slice(0, -3) ;
+    } else if (x.value == "Error!") {
+        ac() ;
+    } else {
+        switch (y.innerHTML.slice(-2)) {
+            case "* ": // sin cos tan
+            y.innerHTML = (/[\d)IE]/.test(x.value.slice(-5, -4))) ? 
+            y.innerHTML.slice(0, -28) : y.innerHTML.slice(0, -25) ;
+            x.value = x.value.slice(0, -4) ;
+            break ;
+            case "n(":
+            case "s(": // asin acos atan
+            y.innerHTML = (/[\d)IE]/.test(x.value.slice(-7, -6))) ? 
+            y.innerHTML.slice(0, -29) : y.innerHTML.slice(0, -26) ;
+            x.value = x.value.slice(0, -6) ;
+            break ;
+            case "0(": // log
+            y.innerHTML = (/[\d)IE]/.test(x.value.slice(-5, -4))) ? 
+            y.innerHTML.slice(0, -14) : y.innerHTML.slice(0, -11) ;
+            x.value = x.value.slice(0, -4) ;
+            break ;
+            case "g(": // ln
+            y.innerHTML = (/[\d)IE]/.test(x.value.slice(-4, -3))) ? 
+            y.innerHTML.slice(0, -12) : y.innerHTML.slice(0, -9) ;
+            x.value = x.value.slice(0, -3) ;
+            break ;
+            case "t(": // sqrt
+            y.innerHTML = (/[\d)IE]/.test(x.value.slice(-6, -5))) ? 
+            y.innerHTML.slice(0, -13) : y.innerHTML.slice(0, -10) ;
+            x.value = x.value.slice(0, -5) ;
+            break ;
+            case "PI": // pi
+            y.innerHTML = (/[\d)IE]/.test(x.value.slice(-2, -1))) ? 
+            y.innerHTML.slice(0, -10) : y.innerHTML.slice(0, -7) ;
+            x.value = x.value.slice(0, -1) ;
+            break ;
+            case ".E": // e
+            y.innerHTML = (/[\d)IE]/.test(x.value.slice(-2, -1))) ? 
+            y.innerHTML.slice(0, -9) : y.innerHTML.slice(0, -6) ;
+            x.value = x.value.slice(0, -1) ;
+            break ;
+            default:
+            y.innerHTML = y.innerHTML.slice(0, -1) ;
+            x.value = x.value.slice(0, -1) ;
+        } ;
+    }
+}
+
+function ac() {
+    var x = document.getElementById("result") ;
+    var y = document.getElementById("myPara") ;
+    x.value = y.innerHTML = "" ;
+}
+
+function ans() {
+    var x = document.getElementById("result") ;
+    var y = document.getElementById("myPara") ;
+    var z = document.getElementById("myAns") ;
+    x.value += "Ans" ;
+    y.innerHTML += (/[\d)IE]/.test(y.innerHTML.slice(-1))) ? 
+    " * " + z.innerHTML : z.innerHTML ;
+}
+
+function equal() {
+    var x = document.getElementById("result") ;
+    var y = document.getElementById("myPara") ;
+    var z = document.getElementById("myAns") ;
+    for (var i = 0; i < x.value.split("(").length - x.value.split(")").length; i++) {
+        y.innerHTML += ")" ;
+    }
+    if (y.innerHTML != "") {
+        x.value = y.innerHTML = z.innerHTML = eval(y.innerHTML
+        .replace(/(\d+\.?\d*)\!/g, "factorial($1)")
+        .replace(/(\(?[^(]*\)?)\^(\(?.*\)?)/, "Math.pow($1, $2)")
+        ) ;
+    }
+    if (!isFinite(x.value)) x.value = "Error!" ;
+}
+</script>
+</body>
+</html>
