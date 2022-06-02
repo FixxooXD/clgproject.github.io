@@ -17,6 +17,16 @@
 <title>my scientific</title>
 <!-- BTW PEEPS, I FOUND A COUPLE BUGS AND PROBABLY WILL FIX THEM MID MARCH HAHA BECAUSE IT'S 1ST WEEK OF SCHOOL -->
 <style>
+     @media only screen and (max-width: 300px) {
+        #container{
+          width: 100%;
+        }
+    }
+    @media only screen and (max-width: 600px) {
+        #container{
+          width: 90%;
+        }
+    }
    
 p {font-size: 0px}
 input { border:2px; font-size: 25px; font-weight: bold; padding: 0px 5px}
@@ -56,10 +66,10 @@ button{
 <p id=myPara></p>
 <p id=myAns>0</p>
 
-<div id="container" class="grid grid-cols-5 border-2 w-2/3 h-3/4 gap-2 ml-auto mr-auto pb-2 px-4 py-4 mt-4 rounded-md shadow-2xl" >
+<div id="container" class="grid grid-cols-5 border-2 w-3/5 h-3/4 gap-2 ml-auto mr-auto pb-2 px-4 py-4 mt-4 rounded-md shadow-2xl" >
     
     <input  id=result colspan=5 class="col-span-5 text-right border-2 py-2 ">
-    
+    <!-- done -->
         
     
     <button class="border-2 py-1  font-medium font-sans" onclick="shiftFn(1)" id=shiftBtn>Shift</button>
