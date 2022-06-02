@@ -19,10 +19,19 @@
 <style>
    
 p {font-size: 0px}
-input { border-2px; font-size: 25px; font-weight: bold; padding: 0px 5px}
+input { border:2px; font-size: 25px; font-weight: bold; padding: 0px 5px}
 #shiftBtn {background-color: yellow}
 #head{
     font-family: ' Nunito', sans-serif;
+}
+button{
+    /* color:wheat; */
+}
+#container{
+   
+    /* background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%); */
+    background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+ background-blend-mode: multiply,multiply;
 }
 </style>
 </head>
@@ -47,51 +56,51 @@ input { border-2px; font-size: 25px; font-weight: bold; padding: 0px 5px}
 <p id=myPara></p>
 <p id=myAns>0</p>
 
-<div class="grid grid-cols-5 border-2 w-2/3 gap-1.5 ml-auto mr-auto pb-2 px-4 py-2 mt-4 rounded-md" >
+<div id="container" class="grid grid-cols-5 border-2 w-2/3 h-3/4 gap-2 ml-auto mr-auto pb-2 px-4 py-4 mt-4 rounded-md shadow-2xl" >
     
     <input  id=result colspan=5 class="col-span-5 text-right border-2 py-2 ">
     
         
     
-    <button class="border-2 py-1" onclick="shiftFn(1)" id=shiftBtn>Shift</button>
-    <button class="border-2" onclick="trigo('sin')">sin</button>
-    <button class="border-2" onclick="trigo('cos')">cos</button>
-    <button class="border-2" onclick="trigo('tan')">tan</button>
-    <button class="border-2" onclick="input('!')">!</button>
+    <button class="border-2 py-1  font-medium font-sans" onclick="shiftFn(1)" id=shiftBtn>Shift</button>
+    <button class="border-2 bg-white font-semibold text-base font-sans" onclick="trigo('sin')">sin</button>
+    <button class="border-2 bg-white font-semibold font-sans" onclick="trigo('cos')">cos</button>
+    <button class="border-2 bg-white font-semibold font-sans" onclick="trigo('tan')">tan</button>
+    <button class="border-2 bg-white" onclick="input('!')"><i class="fa-solid fa-exclamation"></i></button>
+     
+    
+    <button class="border-2 py-1 bg-white font-semibold text-base font-sans" onclick="input('^(')">^</button>
+    <button class="border-2 bg-white font-semibold text-base font-sans" onclick="sqrt()">sqrt</button>
+    <button class="border-2 bg-white font-semibold text-base font-sans" onclick="leftParen()">(</i></button>
+    <button class="border-2 bg-white font-semibold text-base font-sans" onclick="input(')')">)</i></button>
+    <button class="border-2 bg-white font-semibold text-base font-sans" onclick="log(1)">log</button>
     
     
-    <button class="border-2 py-1" onclick="input('^(')">^</button>
-    <button class="border-2" onclick="sqrt()">sqrt</button>
-    <button class="border-2" onclick="leftParen()">(</button>
-    <button class="border-2" onclick="input(')')">)</button>
-    <button class="border-2" onclick="log(1)">log</button>
-    
-    
-    <button class="border-2 py-1" onclick="input('7')">7</button>
-    <button class="border-2" onclick="input('8')">8</button>
-    <button class="border-2" onclick="input('9')">9</button>
-    <button class="border-2" onclick="del()">DEL</button>
-    <button class="border-2" onclick="ac()">AC</button>
+    <button class="border-2 py-1 bg-white" onclick="input('7')"><i class="fa-solid fa-7"></i></button>
+    <button class="border-2 bg-white" onclick="input('8')"><i class="fa-solid fa-8"></i></button>
+    <button class="border-2 bg-white" onclick="input('9')"><i class="fa-solid fa-9"></i></button>
+    <button class="border-2 bg-white font-semibold text-base font-sans" onclick="del()">DEL</button>
+    <button class="border-2 bg-white font-semibold text-base font-sans" onclick="ac()">AC</button>
    
     
-    <button class="border-2 py-1" onclick="input('4')">4</button>
-    <button class="border-2" onclick="input('5')">5</button>
-    <button class="border-2" onclick="input('6')">6</button>
-    <button class="border-2" onclick="multOrDiv('mult')">&#x00D7;</button>
-    <button class="border-2" onclick="multOrDiv('div')">&#x00F7;</button>
+    <button class="border-2 py-1 bg-white" onclick="input('4')"><i class="fa-solid fa-4"></i></button>
+    <button class="border-2 bg-white" onclick="input('5')"><i class="fa-solid fa-5"></i></button>
+    <button class="border-2 bg-white" onclick="input('6')"><i class="fa-solid fa-6"></i></button>
+    <button class="border-2 bg-white" onclick="multOrDiv('mult')"><i class="fa-solid fa-xmark"></i></button>
+    <button class="border-2 bg-white" onclick="multOrDiv('div')"><i class="fa-solid fa-divide"></i></button>
     
      
-    <button class="border-2 py-1" onclick="input('1')">1</button>
-    <button class="border-2" onclick="input('2')">2</button>
-    <button class="border-2" class="border-2" onclick="input('3')">3</button>
-    <button class="border-2" onclick="input('+')">+</button>
-    <button class="border-2" onclick="input('-')">-</button>
+    <button class="border-2 py-1 bg-white" onclick="input('1')"><i class="fa-solid fa-1"></i></button>
+    <button class="border-2 bg-white" onclick="input('2')"><i class="fa-solid fa-2"></i></button>
+    <button class="border-2 bg-white" class="border-2" onclick="input('3')"><i class="fa-solid fa-3"></i></button>
+    <button class="border-2 bg-white" onclick="input('+')"><i class="fa-solid fa-plus"></i></button>
+    <button class="border-2 bg-white" onclick="input('-')"><i class="fa-solid fa-minus"></i></button>
     
-    <button class="border-2 py-1" onclick="input('0')">0</button>
-    <button class="border-2" onclick="input('.')">.</button>
-    <button class="border-2" onclick="piOrE('pi')">&#x03C0;</button>
-    <button class="border-2" onclick="ans()">Ans</button>
-    <button class="border-2" onclick="equal()">=</button>
+    <button class="border-2 py-1 bg-white mb-4" onclick="input('0')"><i class="fa-solid fa-0"></i></button>
+    <button class="border-2 bg-white font-semibold text-base font-sans mb-4" onclick="input('.')">.</button>
+    <button class="border-2 bg-white mb-4" onclick="piOrE('pi')">&#x03C0;</button>
+    <button class="border-2 bg-white font-semibold text-base font-sans mb-4" onclick="ans()">Ans</button>
+    <button class="border-2 bg-white mb-4" onclick="equal()"><i class="fa-solid fa-equals"></i></button>
     
 </div>
 <P></div>P>
