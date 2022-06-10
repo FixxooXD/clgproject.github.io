@@ -14,9 +14,15 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
-<title>my scientific</title>
+<title>Scientific Calculator</title>
 <!-- BTW PEEPS, I FOUND A COUPLE BUGS AND PROBABLY WILL FIX THEM MID MARCH HAHA BECAUSE IT'S 1ST WEEK OF SCHOOL -->
 <style>
+    #search{
+        font-family: 'Nunito';
+    }
+    #heading{
+        font-family: 'Nunito Sans';
+    }
      @media only screen and (max-width: 300px) {
         #container{
           width: 100%;
@@ -29,26 +35,25 @@
     }
    
 p {font-size: 0px}
+
 input { border:2px; font-size: 25px; font-weight: bold; padding: 0px 5px}
+
 #shiftBtn {background-color: yellow}
+
 #head{
     font-family: ' Nunito', sans-serif;
 }
-button{
-    /* color:wheat; */
-}
+
 #container{
-   
-    /* background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%); */
     background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
  background-blend-mode: multiply,multiply;
 }
 </style>
 </head>
 <body> 
-     <!-- full body -->
+   <!-- full body -->
    <div class=" flex flex-rowp-2 border-b-2 border-y-green-500 shadow-xl mt-2 ">  
-    <a class="text-2xl sm:text-4xl ml-2 sm:ml-3 absolute" href="./index.html" >CalQfy<span class="text-xs sm:text-xs ">a home of Calculators</span></a>
+    <a id="search" class="text-2xl sm:text-4xl ml-2 sm:ml-3 absolute" href="./index.html" >CalQfy<span id="heading" class="text-xs sm:text-xs ">a home of Calculators</span></a>
     <!-- short contents -->
    <div class="flex flex-row justify-end w-2/4 ml-auto py-2 text-xs sm:text-lg  relative" > 
       <div class="mr-1 ">About</div> 
@@ -60,6 +65,7 @@ button{
         <input class="border-2 w-32 sm:w-40 h-5" type="search" name="search" id="">
         <div><button class="border-2 ml-1 px-1 mr-2 h-5 text-sm " id="search">search</button></div>
     </div>
+    
 
     <p id="head" class="text-2xl mb-2 ml-4 underline">Scientific Calculator</p>
     <span class="ml-4 mb-2">This is an online javascript scientific calculator. You can click the buttons or type to perform calculations as you would on a physical calculator.</span>
@@ -68,7 +74,7 @@ button{
 
 <div id="container" class="grid grid-cols-5 border-2 w-3/5 h-3/4 gap-2 ml-auto mr-auto pb-2 px-4 py-4 mt-4 rounded-md shadow-2xl" >
     
-    <input  id=result colspan=5 class="col-span-5 text-right border-2 py-2 ">
+    <input  id=result colspan=5 class="col-span-5 text-right border-2 py-2 " placeholder="0">
     <!-- done -->
         
     
@@ -113,8 +119,47 @@ button{
     <button class="border-2 bg-white mb-4" onclick="equal()"><i class="fa-solid fa-equals"></i></button>
     
 </div>
-<P></div>P>
+</div>
+<section id="search" class="w-11/12 mt-4 ml-10 border-2 border-transparent w-fit p-4  "><span class="font-bold">The capabilities of this scientific calculator include:</span>
+<ul class="list-disc ml-8 ">
+    <li>notation</li>
+    <li>floating-point decimal arithmetic</li>
+        <li>logarithmic functions, using both base 10 and base e</li>
+            <li>trigonometric functions</li>
+                <li> exponential functions and roots beyond the square root</li>
+                    <li>quick access to constants such as pi and e</li>     
+</ul>
+</section>  
+<!-- <section class="ml-5 mt-3"> All the functions for this calculator are listed below:-</section>
+div -->
+<!-- <div class="ml-72 flex flex-row border-2 w-fit h-fit">
+<ul class="ml-8 ">
+    <li class="font-medium font-sans">Shift =</li>
+    <li class="font-medium font-sans">sin = </li>
+    <li class="font-medium font-sans">cos =</li>
+    <li class="font-medium font-sans">tan = </li>
+    <li class="font-medium font-sans" >! =</li>
+    <li class="font-medium font-sans" >^ =</li>
+    <li class="font-medium font-sans">sqrt =</li>
+    <li class="font-medium font-sans">log =</li>
+    <li  class="font-medium font-sans">DEL =</li>
+    <li class="font-medium font-sans">AC =</li>
+  </ul>
+  <ul>
+    <li><i class="fa-solid fa-xmark"></i> =</li>
+    <li><i class="fa-solid fa-divide"></i> =</li>
+    <li><i class="fa-solid fa-plus"></i> =</li>
+    <li><i class="fa-solid fa-minus"></i> =</li>
+    <li class="font-medium font-sans">&#x03C0; = </li>
+    <li><i class="fa-solid fa-equals"></i> =</li>
+    <li class="font-medium font-sans">log =</li>
+    <li  class="font-medium font-sans">DEL =</li>
+    <li class="font-medium font-sans">AC =</li>
 
+</ul> -->
+</div>
+
+  <section id="search" class="border-2 p-5 py-8  border-transparent"><h2 class="text-center font-bold underline"> Intresting Fact</h2><span id="search" class="text-sm" > First scientific calculator that included all of the basic ideas above was the programmable Hewlett-Packard HP-9100A, released in 1968, though the Wang LOCI-2 and the Mathatronics Mathatron had some features later identified with scientific calculator designs. The HP-9100 series was built entirely from discrete transistor logic with no integrated circuits, and was one of the first uses of the CORDIC algorithm for trigonometric computation in a personal computing device, as well as the first calculator based on reverse Polish notation (RPN) entry. HP became closely identified with RPN calculators from then on, and even today some of their high-end calculators (particularly the long-lived HP-12C financial calculator and the HP-48 series of graphing calculators) still offer RPN as their default input mode due to having garnered a very large following. </span></section>
 <script>
     function shiftFn(ken) {
     var shift = document.getElementById("shiftBtn") ;

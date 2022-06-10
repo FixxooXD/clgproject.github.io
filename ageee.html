@@ -39,7 +39,13 @@
   #fontt{
     font-family: 'Nunito';
   }
-  
+  #search{
+        font-family: 'Nunito';
+    }
+    #heading{
+        font-family: 'Nunito Sans';
+    }
+
    #inputs_wrapper{
  box-shadow: 0 15px 20px rgba(0,0,0,0.3);
    }
@@ -76,15 +82,20 @@
     </style>
    </head>
  <body>
-     <!-- full body -->
-     <div class=" flex flex-rowp-2 border-b-2 border-y-green-500 shadow-xl mt-2 ">  
-        <a class="text-2xl sm:text-4xl ml-2 sm:ml-3 absolute" href="./index.html">CalQfy<span class="text-xs sm:text-xs ">a home of Calculators</span></a>
-        <!-- short contents -->
-       <div class="flex flex-row justify-end w-2/4 ml-auto py-2 text-xs sm:text-lg  relative" > 
-          <div class="mr-1 ">About</div> 
-          <div>Contacts</div> 
-     </div>
-       </div>   
+    <!-- full body -->
+   <div class=" flex flex-rowp-2 border-b-2 border-y-green-500 shadow-xl mt-2 ">  
+    <a id="search" class="text-2xl sm:text-4xl ml-2 sm:ml-3 absolute" href="./index.html" >CalQfy<span id="heading" class="text-xs sm:text-xs ">a home of Calculators</span></a>
+    <!-- short contents -->
+   <div class="flex flex-row justify-end w-2/4 ml-auto py-2 text-xs sm:text-lg  relative" > 
+      <div class="mr-1 ">About</div> 
+      <div>Contacts</div> 
+ </div>
+   </div>
+     <div class="mt-2">
+        <div class="flex flex-row justify-end" >
+        <input class="border-2 w-32 sm:w-40 h-5" type="search" name="search" id="">
+        <div><button class="border-2 ml-1 px-1 mr-2 h-5 text-sm " id="search">search</button></div>
+    </div>
        <div class="body w-full ">
         <div class="container  flex flex-col justify-center items-center mt-5  ">
             <h1 id="fontt" class="mr-auto ml-6 text-2xl underline "> Age Calculator </h1>
@@ -128,14 +139,14 @@
             </div>
         </div>
     
-        <div id="texts" class="mt-28  ml-8"><p>*The age of a person can be counted differently in different cultures. This calculator is based on the most common age system. In this system, age grows at the birthday. For example, the age of a person that has lived for 3 years and 11 months is 3 and the age will turn to 4 at his/her next birthday one month later. Most western countries use this age system.</p>
+        <div id="texts" class="mt-28  ml-8 border-2 border-transparent p-4"><p>*The age of a person can be counted differently in different cultures. This calculator is based on the most common age system. In this system, age grows at the birthday. For example, the age of a person that has lived for 3 years and 11 months is 3 and the age will turn to 4 at his/her next birthday one month later. Most western countries use this age system.</p>
      
         </div>
-        <div id="texts"s class="ml-5 mt-14">
-            <p class="text-center underline ">Intresting Fact</p>
-            <P>In some cultures, age is expressed by counting years with or without including the current year. For example, one person who is twenty years old is the same as one person who is in the twenty-first year of his/her life. In one of the traditional Chinese age systems, people are born at age 1 and the age grows up at the Traditional Chinese New Year instead of birthday. For example, if one baby was born just one day before the Traditional Chinese New Year, 2 days later, the baby will be at age 2 even though he/she is only 2 days old.</P>
-        </div>
-
+        <section id="texts"s class=" border-2 border-transparent p-4 w-fit ml-10">
+            <h2 class="text-center underline font-bold ">Intresting Fact</h2>
+            <span>In some cultures, age is expressed by counting years with or without including the current year. For example, one person who is twenty years old is the same as one person who is in the twenty-first year of his/her life. In one of the traditional Chinese age systems, people are born at age 1 and the age grows up at the Traditional Chinese New Year instead of birthday. For example, if one baby was born just one day before the Traditional Chinese New Year, 2 days later, the baby will be at age 2 even though he/she is only 2 days old.</span>
+        </section>
+  
         <script>
              const months = [31,28,31,30,31,30,31,31,30,31,30,31];
     

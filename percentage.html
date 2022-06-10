@@ -28,9 +28,13 @@
        #anserrr,#value1, #value2, #ans,#value3,#value4{
          font-family:roboto;
        }
+#search{
+  font-family: 'Nunito';
+}
 
-
-
+ #heading{
+  font-family: 'Nunito Sans';
+ }
 
     #Box-1{
           width: 50%;
@@ -46,6 +50,7 @@
       #heading{
         font-family: 'Nunito';
       }
+
       @media only screen and (max-width: 520px) {
         #Box-1{
        min-width: 100%;
@@ -60,7 +65,7 @@
         }
         footer{
           width:90%;
-          font-famil
+      
         }
 
   }
@@ -133,15 +138,20 @@ input[type=number] {
     
 </head>
 <body>
-    <!-- full body -->
+     <!-- full body -->
    <div class=" flex flex-rowp-2 border-b-2 border-y-green-500 shadow-xl mt-2 ">  
-    <a class="text-2xl sm:text-4xl ml-2 sm:ml-3 absolute" href="./index.html" >CalQfy<span class="text-xs sm:text-xs ">a home of Calculators</span></a>
+    <a id="search" class="text-2xl sm:text-4xl ml-2 sm:ml-3 absolute" href="./index.html" >CalQfy<span id="heading" class="text-xs sm:text-xs ">a home of Calculators</span></a>
     <!-- short contents -->
    <div class="flex flex-row justify-end w-2/4 ml-auto py-2 text-xs sm:text-lg  relative" > 
       <div class="mr-1 ">About</div> 
       <div>Contacts</div> 
  </div>
    </div>
+     <div class="mt-2">
+        <div class="flex flex-row justify-end" >
+        <input class="border-2 w-32 sm:w-40 h-5" type="search" name="search" id="">
+        <div><button class="border-2 ml-1 px-1 mr-2 h-5 text-sm " id="search">search</button></div>
+    </div>
    <h1  id="heading" class="mt-4 ml-5 font-bold sm:text-3xl underline">Percentage Calculator</h1>
    <p class="mt-3 ml-5 sm:text-lg" id="texts">Please provide any two values below and click the "Calculate" button to get the third value & click "Clear" to clear all values.</p>
    <div id="body" class="flex flex-col justify-center  items-center mt-5 mx-2 h-full ">
