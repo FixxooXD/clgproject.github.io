@@ -40,12 +40,14 @@
           width: 50%;
           font-family: 'Nunito Sans';
           /* font-family: 'Roboto Condensed'; */
-          /* font-weight: 300px; */
-          /* background-image: linear-gradient(to right,#1f4037,#99f2c8  ); */
-          /* background-image: linear-gradient(to right  ,#5e5c5c,#9dc5c3); */
 
-          /* background-image: linear-gradient(to right,#BBD2C5,#536976); */
-          /* background-image: linear-gradient(to right, #0F2027, #203A43, #2C5364); */
+          
+          background-color: #DCD9D4;
+ background-image: linear-gradient(to bottom, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%), radial-gradient(at 50% 0%, rgba(255,255,255,0.10) 0%, rgba(0,0,0,0.50) 50%);
+ background-blend-mode: soft-light,screen;
+ 
+ background-color: #E4E4E1;
+ 
       }
       #heading{
         font-family: 'Nunito';
@@ -113,7 +115,16 @@
   text-align: center;
   
 }
-
+#clear{
+  background-color:#A1887F;
+  /* background-color:#80CBC4; */
+}
+#calcuBtn{
+  background-color:#FF9100;
+}
+#_clear{
+  background-color:#A1887F;
+}
 
 /* To Remove the  arrowns in input type text */
 /* Chrome, Safari, Edge, Opera */
@@ -147,42 +158,42 @@ input[type=number] {
       <div>Contacts</div> 
  </div>
    </div>
-     <div class="mt-2">
+     <!-- <div class="mt-2">
         <div class="flex flex-row justify-end" >
         <input class="border-2 w-32 sm:w-40 h-5" type="search" name="search" id="">
         <div><button class="border-2 ml-1 px-1 mr-2 h-5 text-sm " id="search">search</button></div>
-    </div>
-   <h1  id="heading" class="mt-4 ml-5 font-bold sm:text-3xl underline">Percentage Calculator</h1>
-   <p class="mt-3 ml-5 sm:text-lg" id="texts">Please provide any two values below and click the "Calculate" button to get the third value & click "Clear" to clear all values.</p>
+    </div> -->
+   <h1  id="heading" class="mt-4 ml-5 font-semibold sm:text-2xl ">Percentage Calculator</h1>
+   <p class="mt-5 ml-5 sm:text-lg" id="texts">Please provide any two values below and click the "Calculate" button to get the third value & click "Clear" to clear all values.</p>
    <div id="body" class="flex flex-col justify-center  items-center mt-5 mx-2 h-full ">
 
 
     <!-- value -->
-    <div id="Box-1" class="border-2 rounded-lg mt-3 h-32 mr-20 shadow-lg ">
+    <div id="Box-1" class=" rounded-lg mt-3 h-32 mr-20 shadow-lg ">
       <div class="flex flex-row mt-2 " id="inner-box">
-    <p class="sm:ml-8 pl-3 sm:mt-3" ><span class="text  font-bold  sm:text-xl sm:p-4 ">Value</span> <input class="shadow-md sm:h8 border-2 w-32 h-5 sm:h-7  sm:w-40 shadow-black-500/50 " placeholder="value ?" type="number" name="MarkSecured" id="value1"></p>
-    <p class="sm:mt-3 ml-3 sm:ml-6"><span class="text mx-1  mt-2  font-bold  sm:text-xl" >Out Of</span> <input class=" border-2 w-32 h-5 shadow-md sm:h-7  sm:w-40" type="number" name="Total" id="value2"></p>
+    <p class="sm:ml-8 pl-3 sm:mt-3" ><span class="text  font-bold  sm:text-xl sm:p-4 ">Value</span> <input class="rounded shadow-md sm:h8  w-32 h-5 sm:h-7  sm:w-40 shadow-black-500/50 " placeholder="value ?" type="number" name="MarkSecured" id="value1"></p>
+    <p class="sm:mt-3 ml-3 sm:ml-6"><span class="text mx-1  mt-2  font-bold  sm:text-xl" >Out Of</span> <input class="rounded w-32 h-5 shadow-md sm:h-7  sm:w-40" type="number" name="Total" id="value2"></p>
   </div>
 
     <div class="flex flex-row mt-3 sm:ml-10 sm:justify-center  w-4/6">
-    <button class=" mt-1  sm:mt-3 px-2  bg-orange-400 w-20 h-8 rounded-md ml-3" onclick="persent()" ><span class="text-sm text-white">Calculate</span></button>
-    <button id="clear" class="h-8 rounded-md  w-20 border-2 mx-1 mt-1 sm:mt-3 sm:mx-3  px-1   "><span class="text-sm ">Clear</span></button>
-    <input class="shadow-md text-sm  sm:h-7 sm:mt-3  sm:w-40 sm:ml-3 border-2 mt-1 sm:h8  h-5 w-36 ml-2" type="text" name="Percentage" id="ans">
+    <button id="calcuBtn" class=" mt-1  sm:mt-3 px-2   w-20 h-8 rounded-md ml-3" onclick="persent()" ><span class="text-sm text-white">Calculate</span></button>
+    <button id="clear" class="h-8 rounded-md  w-20  mx-1 mt-1 sm:mt-3 sm:mx-3  px-1   "><span  class="text-sm text-white ">Clear</span></button>
+    <input class="shadow-md rounded text-sm  sm:h-7 sm:mt-3  sm:w-40 sm:ml-3  mt-1 sm:h8  h-5 w-36 ml-2" type="text" name="Percentage" id="ans">
 </div>
 </div>
 
 <!-- Percentage -->
   
-<div id="Box-1" class="border-2 rounded-lg mt-5 h-32 mr-20 shadow-lg  z-10 overflow-hidden">
+<div id="Box-1" class=" rounded-lg mt-8 h-32 mr-20 shadow-lg  z-10 overflow-hidden">
   <div class="flex flex-row mt-2 " id="inner-box">
-<p class="sm:ml-8 pl-3 sm:mt-3" ><span class="text  font-bold  sm:text-xl sm:p-4 "><i class="fa-solid fa-percent"></i></span> <input class="shadow-md sm:h8 border-2 w-32 h-5 sm:h-7 sm:w-40 shadow-black-500/50 " placeholder="value ?" type="number" name="MarkSecured" id="value3"></p>
-<p class="sm:mt-3 ml-3 sm:ml-7"><span class="text mx-1  mt-2  font-bold  sm:text-xl z-0 " >Out Of</span> <input class=" border-2 w-32 h-5 shadow-md sm:h-7  sm:w-40" type="number" name="Total" id="value4"></p>
+<p class="sm:ml-8 pl-3 sm:mt-3" ><span class="text  font-bold  sm:text-xl sm:p-4 "><i class="fa-solid fa-percent"></i></span> <input class="shadow-md rounded sm:h8 w-32 h-5 sm:h-7 sm:w-40 shadow-black-500/50 " placeholder="value ?" type="number" name="MarkSecured" id="value3"></p>
+<p class="sm:mt-3 ml-3 sm:ml-7"><span class="text mx-1  mt-2  font-bold  sm:text-xl z-0 " >Out Of</span> <input class="rounded w-32 h-5 shadow-md sm:h-7  sm:w-40" type="number" name="Total" id="value4"></p>
 </div>
 
 <div class="flex flex-row mt-3 sm:ml-10 sm:justify-center  w-4/6">
-<button id="calcuBtn" class=" mt-1  sm:mt-3 px-2  bg-orange-400 w-20 h-8 rounded-md ml-3" onclick="val()" ><span class="text-sm text-white">Calculate</span></button>
-<button id="_clear" class="h-8 rounded-md  w-20 border-2 mx-1 mt-1 sm:mt-3 px-1 sm:mx-3"> <span class="text-sm ">Clear</span></button>
-<input class="shadow-md text-sm  sm:h-7 sm:mt-3  sm:w-40 sm:ml-3 border-2 mt-1 sm:h8  h-5 w-36 ml-2" type="text" name="Percentage" id="anserrr">
+<button id="calcuBtn" class=" mt-1  sm:mt-3 px-2   w-20 h-8 rounded-md ml-3" onclick="val()" ><span class="text-sm text-white">Calculate</span></button>
+<button id="_clear" class="h-8 rounded-md  w-20  mx-1 mt-1 sm:mt-3 px-1 sm:mx-3"> <span class="text-sm text-white">Clear</span></button>
+<input class="shadow-md text-sm rounded sm:h-7 sm:mt-3  sm:w-40 sm:ml-3 mt-1 sm:h8  h-5 w-36 ml-2" type="text" name="Percentage" id="anserrr">
 </div>
 </div>
 
@@ -229,12 +240,32 @@ input[type=number] {
 
   </footer>
 <script> 
-
+const calcuBtn = document.getElementById('calcuBtn');
 const clrBtn = document.getElementById("clear");
 const clrBtnn = document.getElementById("_clear");
+console.log(calcuBtn);
+let vAlue;
+   
+
+  //  calcuBtn.addEventListener('click',function(){
+  //   let num1 = document.getElementById('value1').value;
+  //  let num2 = document.getElementById('value2').value;
+  //   vAlue =  (num1/num2)*100+"%";
+  //   console.log(vAlue);
+  //   const arrayOfDigits = Array.from(String(vAlue), Number);
+  //   console.log(arrayOfDigits);
+  //   const newARR = [arrayOfDigits[0],arrayOfDigits[1],arrayOfDigits[2],arrayOfDigits[3],arrayOfDigits[4],arr.slice(-1)[0]];
+  //   console.log(newARR);
+
+  //  console.log(numsArr);
+  //  let New = 
+//  document.getElementById("res").value = numsArr.join("");   
+
+//  });
 
 
 
+// FOR CLEAR BTNs
 clrBtn.addEventListener("click", function() {
   document.getElementById('ans').value = '';
   document.getElementById('value1').value = '';
@@ -249,32 +280,26 @@ clrBtnn.addEventListener("click", function() {
 
 
 
- 
- function persent(){
-   let num1 = document.getElementById('value1').value;
-   let num2 = document.getElementById('value2').value;
-   document.getElementById('ans').value = (num1/num2)*100 + "%";
-  
+ //  FUNCTIONs
+  function persent(){
+    let num1 = document.getElementById('value1').value;
+    let num2 = document.getElementById('value2').value;
+    let vAlue =  (num1/num2)*100;
+  document.getElementById('ans').value = (num1/num2)*100 + "%";
+
 }  
+
+
+
+
+
+
   function val(){
       let num3 = document.getElementById('value3').value;
       let num4 = document.getElementById('value4').value;
       document.getElementById('anserrr').value= (num3/100)*num4;
   }
 
-
-  // clrBtn.addEventListener('click',function(){
-    // document.getElementById('anserrr').value = '';
-  
-//  });
-
-// function clear(){
-//   document.getElementById('anserrr').value = '';
-  
-// }
-
-
-   
    
 </script>
 

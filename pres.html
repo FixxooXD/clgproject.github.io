@@ -83,4 +83,47 @@
             </div>
         </div>
     
-    
+        <script> 
+            const calcuBtn = document.getElementById('calcuBtn');
+            const clrBtn = document.getElementById("clear");
+            const clrBtnn = document.getElementById("_clear");
+            console.log(calcuBtn);
+            
+            calcuBtn.addEventListener
+            
+            
+            
+            
+            
+            // FOR CLEAR BTNs
+            clrBtn.addEventListener("click", function() {
+              document.getElementById('ans').value = '';
+              document.getElementById('value1').value = '';
+              document.getElementById('value2').value = '';
+            });
+            
+            clrBtnn.addEventListener("click", function() {
+              document.getElementById('anserrr').value = '';
+              document.getElementById('value3').value = '';
+              document.getElementById('value4').value = '';
+            });
+            
+            
+            
+            //  FUNCTIONs
+             function persent(){
+               let num1 = document.getElementById('value1').value;
+               let num2 = document.getElementById('value2').value;
+               let vAlue =  (num1/num2)*100;
+              //  document.getElementById('ans').value = (num1/num2)*100 + "%";
+               let valArr = vAlue.split('')
+               console.log(valArr);
+               
+              
+            }  
+              function val(){
+                  let num3 = document.getElementById('value3').value;
+                  let num4 = document.getElementById('value4').value;
+                  document.getElementById('anserrr').value= (num3/100)*num4;
+              }
+            
