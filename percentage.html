@@ -18,6 +18,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:wght@100;300;600&family=Nunito+Sans:ital,wght@1,300&family=Nunito:wght@500&family=Oleo+Script:wght@700&family=Oswald&family=Roboto+Condensed:ital,wght@0,300;1,300;1,400&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:wght@100;300;600&family=Nunito+Sans:ital,wght@0,300;1,300&family=Nunito:wght@500&family=Oleo+Script:wght@700&family=Oswald&family=Roboto+Condensed:ital,wght@0,300;1,300;1,400&family=Roboto+Flex:opsz,wght@8..144,200&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Alegreya+Sans:wght@300&family=Montserrat:wght@100;300;600&family=Nunito+Sans:ital,wght@0,300;1,300&family=Nunito:wght@500&family=Oleo+Script:wght@700&family=Oswald&family=Roboto+Condensed:ital,wght@0,300;1,300;1,400&family=Roboto+Flex:opsz,wght@8..144,200&display=swap" rel="stylesheet">
+<link rel="shortcut icon" type="image/jpg" href="./neww.png"/>  
     
     
     <title>Percentage Calculator</title>
@@ -160,8 +161,8 @@ input[type=number] {
     <a id="search" class="text-2xl sm:text-4xl ml-2 sm:ml-3 absolute" href="./index.html" >CalQfy<span id="heading" class="text-xs sm:text-xs ">a home of Calculators</span></a>
     <!-- short contents -->
    <div class="flex flex-row justify-end w-2/4 ml-auto py-2 text-xs sm:text-lg  relative" > 
-      <div class="mr-1 ">About</div> 
-      <div>Contacts</div> 
+      <div class="mr-1 text-white   ">About</div> 
+      <div class="text-white">Contacts</div> 
  </div>
    </div>
      <!-- <div class="mt-2">
@@ -233,7 +234,7 @@ input[type=number] {
   |V1 - V2|/
 (V1 + V2)/2
 × 100</P>
-<P id="texts"  class="sm:text-center mt-2   mb-5">EX:	
+<P id="texts"  class="sm:text-center mt-2   mb-5">
 |10 - 6|/
 (10 + 6)/2
 =	
@@ -293,7 +294,8 @@ clrBtnn.addEventListener("click", function() {
     let num1 = document.getElementById('value1').value;
     let num2 = document.getElementById('value2').value;
     let vAlue =  (num1/num2)*100;
-  document.getElementById('ans').value = (num1/num2)*100 + "%";
+    let vAl = vAlue.toFixed(2) 
+    document.getElementById('ans').value = vAl  + "%";
 
 }  
 
