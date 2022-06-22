@@ -307,7 +307,9 @@ clrBtnn.addEventListener("click", function() {
   function val(){
       let num3 = document.getElementById('value3').value;
       let num4 = document.getElementById('value4').value;
-      document.getElementById('anserrr').value= (num3/100)*num4;
+      let Val =(num3/100)*num4;
+
+      document.getElementById('anserrr').value= Val.toFixed();
   }
 
    
